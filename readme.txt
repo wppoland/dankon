@@ -29,6 +29,15 @@ the preset values themselves.
 The code is on GitHub at https://github.com/wppoland/tipping if you want to read
 it, report a bug or suggest a preset workflow we have missed.
 
+= Documentation and links =
+
+* **Documentation** - https://plogins.com/tipping/docs/
+* **Plugin page** - https://plogins.com/tipping/
+* **Source code** - https://github.com/wppoland/tipping
+* **Bug reports and feature requests** - https://github.com/wppoland/tipping/issues
+* **Discussions and questions** - https://github.com/wppoland/tipping/discussions
+
+
 = Features =
 
 * Preset tip amounts: fixed currency values or a percentage of the cart.
