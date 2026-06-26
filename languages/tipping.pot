@@ -49,7 +49,7 @@ msgid "Let customers add a tip or donation at checkout"
 msgstr ""
 
 #: src/Admin/Settings.php:105
-msgid "A friendly, optional tip control on the checkout. Pick preset amounts — fixed or a percentage of the order — and the tip is added to the order totals as a fee. Updates live as the customer chooses."
+msgid "A friendly, optional tip control on the checkout. Pick preset amounts, fixed or a percentage of the order, and the tip is added to the order totals as a fee. Updates live as the customer chooses."
 msgstr ""
 
 #: src/Admin/Settings.php:113

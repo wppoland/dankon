@@ -55,12 +55,12 @@ msgstr "Pozwól klientom dodać napiwek lub darowiznę przy składaniu zamówien
 
 #: src/Admin/Settings.php:105
 msgid ""
-"A friendly, optional tip control on the checkout. Pick preset amounts — "
-"fixed or a percentage of the order — and the tip is added to the order "
+"A friendly, optional tip control on the checkout. Pick preset amounts, "
+"fixed or a percentage of the order, and the tip is added to the order "
 "totals as a fee. Updates live as the customer chooses."
 msgstr ""
 "Przyjazny, opcjonalny element do pozostawienia napiwku przy zamówieniu. "
-"Wybierz predefiniowane kwoty — stałe lub procentowe od wartości zamówienia — "
+"Wybierz predefiniowane kwoty, stałe lub procentowe od wartości zamówienia, "
 "a napiwek zostanie dodany do podsumowania zamówienia jako opłata. Wartość "
 "aktualizuje się na bieżąco podczas wyboru przez klienta."
 
