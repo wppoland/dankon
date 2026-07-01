@@ -81,6 +81,11 @@ auditing.
 
 Yes. The default selection is "No tip", keeping it fully opt-in.
 
+
+= Does this plugin work on WordPress Multisite? =
+
+Yes. This plugin is compatible with WordPress Multisite. Network activate it or activate it on individual sites; each site keeps its own settings and data.
+
 == Screenshots ==
 
 1. The tip control on the checkout page.
