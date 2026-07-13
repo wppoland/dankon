@@ -72,23 +72,3 @@
 	border: 1px solid rgba(176, 106, 19, 0.45);
 	border-radius: 999px;
 }
-
-@media (prefers-color-scheme: dark) {
-	.tipping-admin {
-		--tipping-card-bg: #1e1e1e;
-		--tipping-card-border: #3c434a;
-		/* Lighter amber on the dark card (#1e1e1e): #e0a85a is 7.0:1 — AA. */
-		--tipping-accent: #e0a85a;
-		--tipping-muted: #bbc8d4;
-	}
-
-	.tipping-admin__card {
-		box-shadow: none;
-	}
-
-	.tipping-admin__pill {
-		color: #f0c887; /* 9.5:1 on #1e1e1e — AA. */
-		background: rgba(224, 168, 90, 0.12);
-		border-color: rgba(224, 168, 90, 0.5);
-	}
-}
