@@ -1,4 +1,4 @@
-=== Plogins Tipping - Tips and Gratuity for WooCommerce ===
+=== Tipping - Tips and Gratuity for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, tips, donations, checkout, gratuity
 Requires at least: 6.5
