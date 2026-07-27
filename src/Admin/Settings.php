@@ -20,8 +20,15 @@ final class Settings implements HasHooks
 {
     private const PAGE = 'tipping-settings';
 
+    private ?ProUpsell $proUpsell = null;
+
     public function __construct(private readonly Options $options)
     {
+    }
+
+    private function proUpsell(): ProUpsell
+    {
+        return $this->proUpsell ??= new ProUpsell();
     }
 
     /**
@@ -40,6 +47,7 @@ final class Settings implements HasHooks
         add_action('admin_menu', [$this, 'addMenuPage']);
         add_action('admin_init', [$this, 'registerSettings']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAssets']);
+        $this->proUpsell()->registerHooks();
     }
 
     public function enqueueAssets(string $hook): void
@@ -99,6 +107,8 @@ final class Settings implements HasHooks
         <div class="wrap tipping-admin">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 
+            <?php $this->proUpsell()->banner(); ?>
+
             <div class="tipping-admin__intro">
                 <h2><?php esc_html_e('Let customers add a tip or donation at checkout', 'plogins-tipping'); ?></h2>
                 <p>
@@ -106,6 +116,7 @@ final class Settings implements HasHooks
                 </p>
             </div>
 
+            <div class="tipping-cols">
             <form method="post" action="options.php">
                 <?php settings_fields(self::PAGE); ?>
 
@@ -186,6 +197,11 @@ final class Settings implements HasHooks
 
                 <?php submit_button(); ?>
             </form>
+
+                <?php $this->proUpsell()->aside(); ?>
+            </div>
+
+            <?php $this->proUpsell()->cards(); ?>
         </div>
         <?php
     }
