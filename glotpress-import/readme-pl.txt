@@ -14,8 +14,8 @@ Pozwól klientom dodać opcjonalny napiwek lub darowiznę przy kasie: wstępnie 
 == Description ==
 
 Tipping dodaje opcjonalną kontrolkę napiwków lub darowizn do kasy WooCommerce.
-Klienci wybierają wstępnie ustawioną kwotę — stałą lub procentową względem
-zamówienia — a napiwek jest doliczany do sumy zamówienia jako opłata i zapisywany w zamówieniu.
+Klienci wybierają wstępnie ustawioną kwotę, stałą lub procentową względem
+zamówienia, a napiwek jest doliczany do sumy zamówienia jako opłata i zapisywany w zamówieniu.
 
 Wybór kwoty przelicza sumy przez własny mechanizm AJAX kasy WooCommerce,
 więc kwota widoczna przed zapłatą zawsze uwzględnia napiwek.

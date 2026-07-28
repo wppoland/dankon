@@ -1,7 +1,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Plogins Tipping - Tips and Gratuity for WooCommerce — Live Preview",
+    "title": "Plogins Tipping - Tips and Gratuity for WooCommerce, Live Preview",
     "author": "WPPoland"
   },
   "landingPage": "/wp-admin/admin.php?page=tipping-settings",

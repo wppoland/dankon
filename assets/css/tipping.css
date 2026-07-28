@@ -1,8 +1,8 @@
 /**
- * Tipping — customer-facing control (checkout).
+ * Tipping, customer-facing control (checkout).
  *
  * The world here is the tip line on a restaurant check: you write a gratuity
- * onto the bill. The bold move is exactly that — choosing an amount inks a
+ * onto the bill. The bold move is exactly that, choosing an amount inks a
  * hand-drawn underline under it, left to right, like signing the tip line.
  *
  * Accent is a warm honey-amber (hospitality / gratuity), grounded in this
@@ -90,7 +90,7 @@
 
 /*
  * The tip line. A hand-drawn ink stroke sits under the amount, scaled to zero
- * width and revealed left-to-right when the amount is chosen — like writing
+ * width and revealed left-to-right when the amount is chosen, like writing
  * your gratuity onto the line of a check. It lives inside the pill so there is
  * no layout shift whether it is drawn or not.
  */

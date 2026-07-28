@@ -14,8 +14,8 @@ Lass Kundinnen und Kunden an der Kasse ein optionales Trinkgeld oder eine Spende
 == Description ==
 
 Tipping fügt dem WooCommerce-Checkout eine optionale Trinkgeld- oder Spenden-Kontrolle hinzu.
-Kundinnen und Kunden wählen einen voreingestellten Betrag – entweder einen Festbetrag oder einen Prozentsatz ihrer
-Bestellung – und das Trinkgeld wird als Gebühr zu den Bestellsummen addiert und in der Bestellung gespeichert.
+Kundinnen und Kunden wählen einen voreingestellten Betrag, entweder einen Festbetrag oder einen Prozentsatz ihrer
+Bestellung, und das Trinkgeld wird als Gebühr zu den Bestellsummen addiert und in der Bestellung gespeichert.
 
 Die Auswahl eines Betrags berechnet die Summen über den eigenen Checkout-AJAX von WooCommerce neu,
 sodass die Zahl vor der Zahlung immer das Trinkgeld enthält.
@@ -33,8 +33,8 @@ einen Fehler melden oder einen Voreinstellungs-Workflow vorschlagen möchtest, d
 
 * <strong>Dokumentation</strong> - https://plogins.com/de/plogins-tipping/docs/
 * <strong>Plugin-Seite</strong> - https://plogins.com/de/plogins-tipping/
-* <strong>Quellcode</strong> – https://github.com/wppoland/plogins-tipping
-* <strong>Fehlerberichte und Funktionswünsche</strong> – https://github.com/wppoland/plogins-tipping/issues
+* <strong>Quellcode</strong>, https://github.com/wppoland/plogins-tipping
+* <strong>Fehlerberichte und Funktionswünsche</strong>, https://github.com/wppoland/plogins-tipping/issues
 
 
 = Features =

@@ -1,5 +1,5 @@
 /**
- * Tipping — admin settings screen.
+ * Tipping, admin settings screen.
  *
  * Card-based layout with dark-mode awareness. Custom properties keep colours
  * consistent and easy to theme.
@@ -9,10 +9,10 @@
 	--tipping-card-bg: #fff;
 	--tipping-card-border: #dcdcde;
 	/*
-	 * Family accent — the storefront's warm honey-amber, so the admin reads as
+	 * Family accent, the storefront's warm honey-amber, so the admin reads as
 	 * the same plugin. Used only as a non-text rule/edge (a UI element: WCAG AA
 	 * needs 3:1). Amber #b06a13 vs the wp-admin surface is 4.27:1 on #fff and
-	 * 3.75:1 on the #f0f0f1 body — both clear 3:1. Heading TEXT stays WP's
+	 * 3.75:1 on the #f0f0f1 body, both clear 3:1. Heading TEXT stays WP's
 	 * near-black for full readability; accent text would use #8a4f06 (6.56:1).
 	 */
 	--tipping-accent: #b06a13;
@@ -51,7 +51,7 @@
 	font-size: 1rem;
 }
 
-/* A tiny inline preview of what the customer sees — show, don't just toggle. */
+/* A tiny inline preview of what the customer sees, show, don't just toggle. */
 .tipping-admin__example {
 	display: flex;
 	flex-wrap: wrap;
@@ -67,20 +67,20 @@
 	font-size: 0.8125rem;
 	font-weight: 600;
 	line-height: 1.4;
-	color: #8a4f06; /* 6.56:1 on #fff — AA for text. */
+	color: #8a4f06; /* 6.56:1 on #fff, AA for text. */
 	background: rgba(176, 106, 19, 0.1);
 	border: 1px solid rgba(176, 106, 19, 0.45);
 	border-radius: 999px;
 }
 
 /* ------------------------------------------------------------------ *
- * PRO upsell — dismissible banner, sidebar promo, "what PRO adds"
+ * PRO upsell, dismissible banner, sidebar promo, "what PRO adds"
  * locked cards. Pure advertising (no disabled inputs), scoped to
  * .tipping-admin so nothing leaks into the rest of wp-admin.
  *
  * Accent contrast (WCAG):
- *   Decorative accent  #b06a13  — borders, rules, lock glyphs (non-text).
- *   Button/text accent #8a4f06  — behind WHITE button text: 6.56:1 on
+ *   Decorative accent  #b06a13, borders, rules, lock glyphs (non-text).
+ *   Button/text accent #8a4f06, behind WHITE button text: 6.56:1 on
  *                                 white, clears AA (4.5:1).
  * ------------------------------------------------------------------ */
 

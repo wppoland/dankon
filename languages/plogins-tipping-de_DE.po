@@ -20,7 +20,7 @@ msgstr ""
 #. Plugin Name of the plugin
 #: tipping.php
 msgid "Tipping - Checkout Tips and Donations for WooCommerce"
-msgstr "Trinkgeld – Trinkgeld und Spenden an der Kasse für WooCommerce"
+msgstr "Trinkgeld, Trinkgeld und Spenden an der Kasse für WooCommerce"
 
 #. Plugin URI of the plugin
 #: tipping.php
@@ -176,7 +176,7 @@ msgid ""
 "Tipping - Checkout Tips and Donations for WooCommerce requires WooCommerce "
 "to be active."
 msgstr ""
-"Trinkgeld – Checkout-Tipps und Spenden für WooCommerce erfordern, dass "
+"Trinkgeld, Checkout-Tipps und Spenden für WooCommerce erfordern, dass "
 "WooCommerce aktiv ist."
 
 #: src/Admin/ProUpsell.php:78
