@@ -2,7 +2,8 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce 0.1.0\n"
+"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce "
+"0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tipping\n"
 "POT-Creation-Date: 2026-06-16T20:24:12+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:24:12+00:00\n"
@@ -51,14 +52,14 @@ msgstr "Propinas"
 #: src/Admin/Settings.php:103
 msgid "Let customers add a tip or donation at checkout"
 msgstr ""
-"Permita que los clientes agreguen una propina o una donación al finalizar la"
-" compra"
+"Permita que los clientes agreguen una propina o una donación al finalizar la "
+"compra"
 
 #: src/Admin/Settings.php:105
 msgid ""
-"A friendly, optional tip control on the checkout. Pick preset amounts, fixed"
-" or a percentage of the order, and the tip is added to the order totals as a"
-" fee. Updates live as the customer chooses."
+"A friendly, optional tip control on the checkout. Pick preset amounts, fixed "
+"or a percentage of the order, and the tip is added to the order totals as a "
+"fee. Updates live as the customer chooses."
 msgstr ""
 "Un control amigable y opcional de propinas en la caja. Elija cantidades "
 "preestablecidas, fijas o un porcentaje del pedido, y la propina se añade a "
@@ -97,8 +98,8 @@ msgid ""
 "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
 "shelter”."
 msgstr ""
-"El título que se muestra encima de los botones de propina, p. ej. “Añade una"
-" propina” o “Apoya nuestro refugio”."
+"El título que se muestra encima de los botones de propina, p. ej. “Añade una "
+"propina” o “Apoya nuestro refugio”."
 
 #: src/Admin/Settings.php:137
 msgid "Description"
@@ -134,8 +135,8 @@ msgid ""
 "so a larger order means a larger tip. Fixed presets stay the same flat "
 "amount in your store currency whatever the cart total."
 msgstr ""
-"Los ajustes preestablecidos de porcentaje aumentan con el carrito: un ajuste"
-" preestablecido de 5 añade el 5 % del subtotal, por lo que un pedido mayor "
+"Los ajustes preestablecidos de porcentaje aumentan con el carrito: un ajuste "
+"preestablecido de 5 añade el 5 % del subtotal, por lo que un pedido mayor "
 "significa una propina mayor. Los ajustes preestablecidos fijos mantienen la "
 "misma cantidad fija en la moneda de su tienda, independientemente del total "
 "del carrito."
@@ -178,3 +179,63 @@ msgid ""
 msgstr ""
 "Propinas: las propinas y donaciones al finalizar la compra para WooCommerce "
 "requieren que WooCommerce esté activo."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "desde %d zł/año"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
