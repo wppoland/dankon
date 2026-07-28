@@ -208,7 +208,7 @@ final class Settings implements HasHooks
 
     /**
      * Render a tiny, non-interactive preview of the preset pills as the customer
-     * will see them — so the merchant can read the effect of their values at a
+     * will see them, so the merchant can read the effect of their values at a
      * glance instead of imagining it. Presentation only; no settings are read or
      * written here beyond the values already passed in.
      *

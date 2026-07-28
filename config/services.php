@@ -1,7 +1,7 @@
 <?php
 /**
  * Service wiring. Returns a closure that registers every service in the
- * container. Services are thin and self-contained — no external runtime deps.
+ * container. Services are thin and self-contained, no external runtime deps.
  *
  * @package Tipping
  */

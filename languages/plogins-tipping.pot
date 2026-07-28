@@ -2,7 +2,8 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce 0.1.0\n"
+"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce "
+"0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tipping\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,8 +40,7 @@ msgstr ""
 msgid "https://plogins.com/"
 msgstr ""
 
-#: src/Admin/Settings.php:63
-#: src/Admin/Settings.php:64
+#: src/Admin/Settings.php:63 src/Admin/Settings.php:64
 msgid "Tipping"
 msgstr ""
 
@@ -49,7 +49,10 @@ msgid "Let customers add a tip or donation at checkout"
 msgstr ""
 
 #: src/Admin/Settings.php:105
-msgid "A friendly, optional tip control on the checkout. Pick preset amounts, fixed or a percentage of the order, and the tip is added to the order totals as a fee. Updates live as the customer chooses."
+msgid ""
+"A friendly, optional tip control on the checkout. Pick preset amounts, fixed "
+"or a percentage of the order, and the tip is added to the order totals as a "
+"fee. Updates live as the customer chooses."
 msgstr ""
 
 #: src/Admin/Settings.php:113
@@ -65,20 +68,22 @@ msgid "Show the tip control on the checkout."
 msgstr ""
 
 #: src/Admin/Settings.php:123
-msgid "When off, the control never renders and no assets load on the storefront."
+msgid ""
+"When off, the control never renders and no assets load on the storefront."
 msgstr ""
 
 #: src/Admin/Settings.php:128
 msgid "Label"
 msgstr ""
 
-#: src/Admin/Settings.php:131
-#: src/Settings/Options.php:64
+#: src/Admin/Settings.php:131 src/Settings/Options.php:64
 msgid "Add a tip"
 msgstr ""
 
 #: src/Admin/Settings.php:132
-msgid "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our shelter”."
+msgid ""
+"The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
+"shelter”."
 msgstr ""
 
 #: src/Admin/Settings.php:137
@@ -86,7 +91,9 @@ msgid "Description"
 msgstr ""
 
 #: src/Admin/Settings.php:141
-msgid "Optional supporting text shown under the label. Tipping is always optional for the customer."
+msgid ""
+"Optional supporting text shown under the label. Tipping is always optional "
+"for the customer."
 msgstr ""
 
 #: src/Admin/Settings.php:149
@@ -106,7 +113,10 @@ msgid "Fixed amount"
 msgstr ""
 
 #: src/Admin/Settings.php:161
-msgid "Percentage presets scale with the cart: a 5 preset adds 5% of the subtotal, so a larger order means a larger tip. Fixed presets stay the same flat amount in your store currency whatever the cart total."
+msgid ""
+"Percentage presets scale with the cart: a 5 preset adds 5% of the subtotal, "
+"so a larger order means a larger tip. Fixed presets stay the same flat "
+"amount in your store currency whatever the cart total."
 msgstr ""
 
 #: src/Admin/Settings.php:166
@@ -114,7 +124,11 @@ msgid "Preset values"
 msgstr ""
 
 #: src/Admin/Settings.php:170
-msgid "Comma-separated values. For percentages use whole numbers (5, 10, 15); for fixed amounts use currency values (2, 5, 10). Up to eight are shown; the rest are ignored. Leave empty and the control is hidden until you add at least one."
+msgid ""
+"Comma-separated values. For percentages use whole numbers (5, 10, 15); for "
+"fixed amounts use currency values (2, 5, 10). Up to eight are shown; the "
+"rest are ignored. Leave empty and the control is hidden until you add at "
+"least one."
 msgstr ""
 
 #: src/Admin/Settings.php:209
@@ -123,8 +137,7 @@ msgstr ""
 
 #. translators: %s: a whole-number percentage, e.g. 5.
 #. translators: %s: a whole-number percentage, e.g. 10.
-#: src/Admin/Settings.php:215
-#: src/Frontend/TipControl.php:108
+#: src/Admin/Settings.php:215 src/Frontend/TipControl.php:108
 #, php-format
 msgid "%s%%"
 msgstr ""
@@ -134,5 +147,67 @@ msgid "No tip"
 msgstr ""
 
 #: tipping.php:47
-msgid "Tipping - Checkout Tips and Donations for WooCommerce requires WooCommerce to be active."
+msgid ""
+"Tipping - Checkout Tips and Donations for WooCommerce requires WooCommerce "
+"to be active."
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr ""
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr ""
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr ""
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr ""
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
 msgstr ""

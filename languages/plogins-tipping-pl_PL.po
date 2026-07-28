@@ -7,16 +7,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tipping\n"
 "POT-Creation-Date: 2026-06-16T20:24:12+00:00\n"
 "PO-Revision-Date: 2026-06-15 00:00+0000\n"
-"Last-Translator: WPPoland <hello@plogins.com>\n"
-"Language-Team: Polish <pl_PL@li.org>\n"
+"Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
 "|| n%100>14) ? 1 : 2);\n"
-"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: plogins-tipping\n"
+"X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
 #: tipping.php
@@ -55,13 +55,13 @@ msgstr "Pozwól klientom dodać napiwek lub darowiznę przy składaniu zamówien
 
 #: src/Admin/Settings.php:105
 msgid ""
-"A friendly, optional tip control on the checkout. Pick preset amounts, "
-"fixed or a percentage of the order, and the tip is added to the order "
-"totals as a fee. Updates live as the customer chooses."
+"A friendly, optional tip control on the checkout. Pick preset amounts, fixed "
+"or a percentage of the order, and the tip is added to the order totals as a "
+"fee. Updates live as the customer chooses."
 msgstr ""
 "Przyjazny, opcjonalny element do pozostawienia napiwku przy zamówieniu. "
-"Wybierz predefiniowane kwoty, stałe lub procentowe od wartości zamówienia, "
-"a napiwek zostanie dodany do podsumowania zamówienia jako opłata. Wartość "
+"Wybierz predefiniowane kwoty, stałe lub procentowe od wartości zamówienia, a "
+"napiwek zostanie dodany do podsumowania zamówienia jako opłata. Wartość "
 "aktualizuje się na bieżąco podczas wyboru przez klienta."
 
 #: src/Admin/Settings.php:113
@@ -133,6 +133,10 @@ msgid ""
 "so a larger order means a larger tip. Fixed presets stay the same flat "
 "amount in your store currency whatever the cart total."
 msgstr ""
+"Procentowe wartości predefiniowane skalują się wraz z koszykiem: wartość 5 "
+"dodaje 5% sumy częściowej, więc większe zamówienie oznacza większy napiwek. "
+"Stałe wartości predefiniowane pozostają tą samą kwotą w walucie Twojego "
+"sklepu, niezależnie od wartości koszyka."
 
 #: src/Admin/Settings.php:166
 msgid "Preset values"
@@ -145,10 +149,14 @@ msgid ""
 "rest are ignored. Leave empty and the control is hidden until you add at "
 "least one."
 msgstr ""
+"Wartości oddzielone przecinkami. W przypadku procentów użyj liczb "
+"całkowitych (5, 10, 15); dla kwot stałych użyj wartości waluty (2, 5, 10). "
+"Wyświetlanych jest maksymalnie osiem; reszta jest ignorowana. Pozostaw "
+"puste, a kontrolka będzie ukryta, dopóki nie dodasz przynajmniej jednej."
 
 #: src/Admin/Settings.php:209
 msgid "Preview of the tip buttons"
-msgstr ""
+msgstr "Podgląd przycisków napiwków"
 
 #. translators: %s: a whole-number percentage, e.g. 5.
 #. translators: %s: a whole-number percentage, e.g. 10.
@@ -168,6 +176,66 @@ msgid ""
 msgstr ""
 "Tipping - Napiwki i darowizny przy zamówieniu dla WooCommerce wymaga "
 "aktywnej wtyczki WooCommerce."
+
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Wkrótce"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Wkrótce"
+
+#. translators: %d: yearly price in PLN
+#: src/Admin/ProUpsell.php:83
+#, php-format
+msgid "od %d zł/rok"
+msgstr "od %d zł/rok"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:88
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "od %1$s%2$d/rok"
+
+#: src/Admin/ProUpsell.php:97
+msgid "Upgrade to PRO"
+msgstr "Przejdź na PRO"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Powiadom mnie"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:98
+msgid "Get notified"
+msgstr "Powiadom mnie"
+
+#: src/Admin/ProUpsell.php:128
+msgid "Permission denied."
+msgstr "Brak uprawnień."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:158
+#, php-format
+msgid "Do more with %s"
+msgstr "Zrób więcej dzięki %s"
+
+#: src/Admin/ProUpsell.php:165
+msgid "Dismiss this notice"
+msgstr "Odrzuć to powiadomienie"
+
+#: src/Admin/ProUpsell.php:182
+msgid "Unlock every PRO feature"
+msgstr "Odblokuj wszystkie funkcje PRO"
+
+#: src/Admin/ProUpsell.php:195
+msgid "one licence, every PRO feature"
+msgstr "jedna licencja, wszystkie funkcje PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:214
+#, php-format
+msgid "What %s adds"
+msgstr "Co dodaje %s"
 
 #~ msgid ""
 #~ "Percentage presets scale with the order total (5% of the subtotal). Fixed "

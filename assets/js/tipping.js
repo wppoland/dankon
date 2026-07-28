@@ -1,5 +1,5 @@
 /**
- * Tipping — front-end behaviour.
+ * Tipping, front-end behaviour.
  *
  * Sends the customer's tip choice to the server, then asks WooCommerce to
  * recalculate totals so the fee appears live. Progressive enhancement: if this
