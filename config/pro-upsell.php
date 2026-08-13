@@ -30,12 +30,12 @@ return [
             'pl' => ['title' => 'Cele zbiórki i paski postępu', 'desc' => 'Pokaż cel zbiórki z paskiem postępu na żywo, aby klient widział, jak blisko kampania jest celu (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Recipient / cause splitting', 'desc' => 'Let shoppers choose which cause or recipient their tip supports, and split totals across multiple recipients (RecipientSplitting, shipped).'],
-            'pl' => ['title' => 'Podział na odbiorców / cele', 'desc' => 'Pozwól klientowi wybrać cel lub odbiorcę napiwku i podziel sumy między wielu odbiorców (RecipientSplitting, wdrożone).'],
+            'en' => ['title' => 'Recipient / cause splitting', 'desc' => 'Let shoppers choose which cause or recipient their tip supports, and split totals across multiple recipients (shipped).'],
+            'pl' => ['title' => 'Podział na odbiorców / cele', 'desc' => 'Pozwól klientowi wybrać cel lub odbiorcę napiwku i podziel sumy między wielu odbiorców (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Tip reports', 'desc' => 'Break down tips by period, preset and recipient, with CSV export for accounting (TipReports, shipped).'],
-            'pl' => ['title' => 'Raporty napiwków', 'desc' => 'Rozbij napiwki według okresu, presetu i odbiorcy, z eksportem CSV do księgowości (TipReports, wdrożone).'],
+            'en' => ['title' => 'Tip reports', 'desc' => 'Break down tips by period, preset and recipient, with CSV export for accounting (shipped).'],
+            'pl' => ['title' => 'Raporty napiwków', 'desc' => 'Rozbij napiwki według okresu, presetu i odbiorcy, z eksportem CSV do księgowości (wdrożone).'],
         ],
         [
             'en' => ['title' => 'Post-purchase tipping', 'desc' => 'Invite a tip on the thank-you page after checkout (shipped).'],
