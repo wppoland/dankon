@@ -101,14 +101,18 @@ final class TipControl implements HasHooks
     }
 
     /**
-     * Format a preset value for display: "10%" for percentages, a currency
-     * amount for fixed presets.
+     * Format a preset value for display: "10%" or "7.5%" for percentages, a
+     * currency amount for fixed presets.
      */
     public static function formatPreset(float $value, bool $isPercent): string
     {
         if ($isPercent) {
-            /* translators: %s: a whole-number percentage, e.g. 10. */
-            return sprintf(__('%s%%', 'plogins-tipping'), (string) (int) round($value));
+            // The presets field takes decimals and the admin preview shows them,
+            // so a merchant saving 2.5 saw "2.5%" there. This cast the value to an
+            // int, so the shopper pressed a button labelled "3%" and was charged
+            // 2.5% of the subtotal. Format it the way the admin already does.
+            /* translators: %s: a percentage, e.g. 10 or 7.5. */
+            return sprintf(__('%s%%', 'plogins-tipping'), Options::formatNumber($value));
         }
 
         return wp_strip_all_tags(wc_price($value));

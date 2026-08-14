@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,10 @@ The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the s
 Plogins Tipping includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-tipping`, so WordPress.org language packs can also override or extend these bundled translations.
 
 == Changelog ==
+
+= 1.0.6 =
+* Decimal percentage presets now show correctly on the checkout: a 2.5 preset is offered as "2.5%" instead of being rounded up to "3%" on the button while 2.5% was charged.
+* The preset values help text now says decimals are allowed.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.

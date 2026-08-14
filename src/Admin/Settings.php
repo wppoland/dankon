@@ -178,7 +178,7 @@ final class Settings implements HasHooks
                                 </th>
                                 <td>
                                     <input type="text" id="tipping_presets" name="<?php echo esc_attr(Options::OPTION); ?>[presets]" value="<?php echo esc_attr(implode(', ', array_map([$this, 'formatNumber'], $presets))); ?>" class="regular-text" placeholder="5, 10, 15" />
-                                    <p class="description"><?php esc_html_e('Comma-separated values. For percentages use whole numbers (5, 10, 15); for fixed amounts use currency values (2, 5, 10). Up to eight are shown; the rest are ignored. Leave empty and the control is hidden until you add at least one.', 'plogins-tipping'); ?></p>
+                                    <p class="description"><?php esc_html_e('Comma-separated values, decimals allowed to two places. For percentages use numbers like 5, 7.5, 10; for fixed amounts use currency values (2, 5, 10). Up to eight are shown; the rest are ignored. Leave empty and the control is hidden until you add at least one.', 'plogins-tipping'); ?></p>
                                     <?php $this->renderPresetPreview($type, $presets); ?>
                                 </td>
                             </tr>
@@ -227,7 +227,7 @@ final class Settings implements HasHooks
                 <li class="tipping-admin__pill">
                     <?php
                     if ('percent' === $type) {
-                        /* translators: %s: a whole-number percentage, e.g. 5. */
+                        /* translators: %s: a percentage, e.g. 5 or 7.5. */
                         echo esc_html(sprintf(__('%s%%', 'plogins-tipping'), $this->formatNumber($preset)));
                     } else {
                         echo wp_kses_post(wc_price($preset));
@@ -303,10 +303,6 @@ final class Settings implements HasHooks
      */
     public function formatNumber(float $value): string
     {
-        if (floor($value) === $value) {
-            return (string) (int) $value;
-        }
-
-        return rtrim(rtrim(number_format($value, 2, '.', ''), '0'), '.');
+        return Options::formatNumber($value);
     }
 }

@@ -109,6 +109,20 @@ final class Options
     }
 
     /**
+     * Format a stored preset for display without trailing zeros: 2.5 stays
+     * "2.5", 10.00 reads as "10". Shared so the admin field, the admin preview
+     * and the storefront pills all show the same number.
+     */
+    public static function formatNumber(float $value): string
+    {
+        if (floor($value) === $value) {
+            return (string) (int) $value;
+        }
+
+        return rtrim(rtrim(number_format($value, 2, '.', ''), '0'), '.');
+    }
+
+    /**
      * True when the control has something to render: enabled and with at least
      * one preset.
      */
