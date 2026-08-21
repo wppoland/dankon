@@ -26,15 +26,15 @@ Everything lives on one screen under **WooCommerce → Tipping**: the label and
 description shoppers see, whether presets are fixed amounts or percentages, and
 the preset values themselves.
 
-The code is on GitHub at https://github.com/wppoland/plogins-tipping if you want to read
+The code is on GitHub at [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping) if you want to read
 it, report a bug or suggest a preset workflow we have missed.
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-tipping/docs/
-* **Plugin page** - https://plogins.com/plogins-tipping/
-* **Source code** - https://github.com/wppoland/plogins-tipping
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-tipping/issues
+* **Documentation**: [plogins.com/plogins-tipping/docs/](https://plogins.com/plogins-tipping/docs/)
+* **Plugin page**: [plogins.com/plogins-tipping/](https://plogins.com/plogins-tipping/)
+* **Source code**: [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-tipping/issues](https://github.com/wppoland/plogins-tipping/issues)
 
 
 = Features =
