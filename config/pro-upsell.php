@@ -15,7 +15,6 @@ return [
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',
-    'price_pln'  => 129,
     'lead'       => [
         'en' => 'The 0.4.0 release ships round-up tipping, tip goal progress bar, recipient splitting, tip reports and post-purchase tipping.',
         'pl' => 'Wydanie 0.4.0 dostarcza zaokrąglenie w górę, cel zbiórki, podział na odbiorców, raporty napiwków i napiwek po zakupie.',
