@@ -45,7 +45,7 @@ it, report a bug or suggest a preset workflow we have missed.
 * Editable label and description.
 * Opt-in by default: "No tip" is preselected, and tips are added as a non-taxable fee.
 * Renders nothing when tipping is disabled or no presets are set, so the checkout is never cluttered with an empty control.
-* Buttons are keyboard operable, with a visible focus ring, an ARIA live status line and reduced-motion handling.
+* Buttons are keyboard operable, with a visible focus ring and reduced-motion handling.
 * Ships with a POT file for translation and removes its option on uninstall.
 * Declares HPOS compatibility. The control renders on the classic (shortcode) checkout.
 
