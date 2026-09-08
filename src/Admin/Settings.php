@@ -7,6 +7,7 @@ namespace Tipping\Admin;
 defined('ABSPATH') || exit;
 
 use Tipping\Contract\HasHooks;
+use Tipping\Service\Texts;
 use Tipping\Settings\Options;
 
 /**
@@ -100,9 +101,17 @@ final class Settings implements HasHooks
             return;
         }
 
+        // Deliberately the RAW settings, never Options::resolved(): an empty text
+        // field must stay empty here. Rendering the resolved default into the
+        // input would save the merchant's current language back into the option
+        // on the next submit and freeze it there.
         $settings = $this->options->all();
         $type     = $this->options->type();
         $presets  = $this->options->presets();
+
+        // Shown as placeholders instead, so the merchant can read the default
+        // they get when they leave a field empty, in their own language.
+        $textDefaults = Texts::defaults();
         ?>
         <div class="wrap tipping-admin">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
@@ -139,8 +148,8 @@ final class Settings implements HasHooks
                                     <label for="tipping_label"><?php esc_html_e('Label', 'plogins-tipping'); ?></label>
                                 </th>
                                 <td>
-                                    <input type="text" id="tipping_label" name="<?php echo esc_attr(Options::OPTION); ?>[label]" value="<?php echo esc_attr((string) ($settings['label'] ?? '')); ?>" class="regular-text" placeholder="<?php esc_attr_e('Add a tip', 'plogins-tipping'); ?>" />
-                                    <p class="description"><?php esc_html_e('The heading shown above the tip buttons, e.g. “Add a tip” or “Support our shelter”.', 'plogins-tipping'); ?></p>
+                                    <input type="text" id="tipping_label" name="<?php echo esc_attr(Options::OPTION); ?>[label]" value="<?php echo esc_attr((string) ($settings['label'] ?? '')); ?>" class="regular-text" placeholder="<?php echo esc_attr($textDefaults['label']); ?>" />
+                                    <p class="description"><?php esc_html_e('The heading shown above the tip buttons, e.g. “Add a tip” or “Support our shelter”. Leave empty to use the translated default shown in the field.', 'plogins-tipping'); ?></p>
                                 </td>
                             </tr>
                             <tr>
@@ -148,8 +157,15 @@ final class Settings implements HasHooks
                                     <label for="tipping_description"><?php esc_html_e('Description', 'plogins-tipping'); ?></label>
                                 </th>
                                 <td>
-                                    <textarea id="tipping_description" name="<?php echo esc_attr(Options::OPTION); ?>[description]" rows="2" class="large-text"><?php echo esc_textarea((string) ($settings['description'] ?? '')); ?></textarea>
-                                    <p class="description"><?php esc_html_e('Optional supporting text shown under the label. Tipping is always optional for the customer.', 'plogins-tipping'); ?></p>
+                                    <textarea id="tipping_description" name="<?php echo esc_attr(Options::OPTION); ?>[description]" rows="2" class="large-text" placeholder="<?php echo esc_attr($textDefaults['description']); ?>"><?php echo esc_textarea((string) ($settings['description'] ?? '')); ?></textarea>
+                                    <p class="description"><?php esc_html_e('Optional supporting text shown under the label. Tipping is always optional for the customer. Leave empty to use the translated default shown in the field.', 'plogins-tipping'); ?></p>
+                                    <p>
+                                        <label for="tipping_show_description">
+                                            <input type="checkbox" id="tipping_show_description" name="<?php echo esc_attr(Options::OPTION); ?>[show_description]" value="1" <?php checked($this->options->showDescription(), true); ?> />
+                                            <?php esc_html_e('Show the description', 'plogins-tipping'); ?>
+                                        </label>
+                                    </p>
+                                    <p class="description"><?php esc_html_e('Untick to show the label on its own. Clearing the text box no longer hides it, because an empty box now means "use the default wording".', 'plogins-tipping'); ?></p>
                                 </td>
                             </tr>
                         </tbody>
@@ -260,6 +276,7 @@ final class Settings implements HasHooks
             'enabled'     => ! empty($raw['enabled']),
             'label'       => isset($raw['label']) ? sanitize_text_field((string) $raw['label']) : '',
             'description' => isset($raw['description']) ? sanitize_textarea_field((string) $raw['description']) : '',
+            'show_description' => ! empty($raw['show_description']),
             'type'        => $type,
             'presets'     => $this->parsePresets($raw['presets'] ?? ''),
         ];

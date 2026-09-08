@@ -19,9 +19,19 @@ return [
     // Master switch.
     'enabled' => true,
 
-    // Customer-facing copy.
-    'label'       => 'Add a tip',
-    'description' => 'Support our team, every tip is appreciated. Choose an amount or skip.',
+    // Customer-facing copy, empty on purpose. An English sentence here is not a
+    // gettext call, so it never reaches the .pot and no language pack can ever
+    // replace it once it has been merged over the stored option. Empty means
+    // "use Tipping\Service\Texts", which is translated; anything a merchant
+    // types still wins and is stored exactly as typed.
+    'label'       => '',
+    'description' => '',
+    // "Leave the description blank to hide it" stopped working the moment blank
+    // came to mean "use the translated default", and a merchant who had hidden it
+    // would have had it pushed back onto their checkout with no way to remove it
+    // again. One text field cannot express both "not customised" and "off", so
+    // "off" gets a control of its own. True keeps what the plugin does today.
+    'show_description' => true,
 
     // Preset type: 'percent' (of the cart subtotal) or 'fixed' (currency amounts).
     'type' => 'percent',

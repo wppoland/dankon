@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,11 @@ The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the s
 Plogins Tipping is fully translatable and ships the `plogins-tipping.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.0.10 =
+* Fixed the tip label and the supporting description staying English on a shop that is not in English. Both were plain strings in a config file rather than translatable ones, so they never reached the translation template and no language pack could replace them. On a Polish, German or Spanish checkout the shopper saw "Add a tip" and the English sentence under it, and the same English label was used for the tip line in the order totals and in order emails.
+* Both texts are translatable now and follow the site language as soon as a translation for them exists. Translations arrive as WordPress.org language packs rather than in this download, so on a site with no pack for this plugin they stay English until one is published. If you typed your own wording (including your own translation), it is kept exactly as you saved it and nothing changes for you.
+* The Label and Description fields in the Tipping settings now show the translated default as a placeholder. Leaving a field empty means "use the default in the site language" instead of freezing one language into the database.
 
 = 1.0.9 =
 * Renamed to Plogins Tipping - Tips and Gratuity for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.

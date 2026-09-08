@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Tipping\Settings;
 
+use Tipping\Service\Texts;
+
 defined('ABSPATH') || exit;
 
 /**
@@ -22,7 +24,12 @@ final class Options
     private ?array $cache = null;
 
     /**
-     * All settings merged over the packaged defaults.
+     * All settings merged over the packaged defaults, exactly as stored.
+     *
+     * Customer-facing text keys stay RAW here: an empty string means "not set".
+     * The admin form binds to this, so a merchant who never typed a label sees an
+     * empty field with a placeholder and saving cannot freeze one language into
+     * the option. Rendering goes through {@see self::resolved()} instead.
      *
      * @return array<string, mixed>
      */
@@ -52,6 +59,19 @@ final class Options
         $this->cache = null;
     }
 
+    /**
+     * All settings with every customer-facing text resolved for display: the
+     * merchant's own wording where they set one, the translated default where
+     * they did not. Use this on every path that renders to a shopper, never on a
+     * path that writes back to the option.
+     *
+     * @return array<string, mixed>
+     */
+    public function resolved(): array
+    {
+        return Texts::apply($this->all());
+    }
+
     public function isEnabled(): bool
     {
         return (bool) ($this->all()['enabled'] ?? false);
@@ -59,14 +79,27 @@ final class Options
 
     public function label(): string
     {
-        $label = trim((string) ($this->all()['label'] ?? ''));
-
-        return '' !== $label ? $label : __('Add a tip', 'plogins-tipping');
+        return (string) ($this->resolved()['label'] ?? '');
     }
 
+    /**
+     * The supporting line under the label, or '' when the merchant turned it off.
+     *
+     * Blank means "not customised" now, so it can no longer mean "hidden" as
+     * well; showDescription() is what hides it.
+     */
     public function description(): string
     {
-        return (string) ($this->all()['description'] ?? '');
+        if (! $this->showDescription()) {
+            return '';
+        }
+
+        return (string) ($this->resolved()['description'] ?? '');
+    }
+
+    public function showDescription(): bool
+    {
+        return (bool) ($this->all()['show_description'] ?? true);
     }
 
     /**
