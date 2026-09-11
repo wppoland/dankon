@@ -22,7 +22,7 @@ sodass die Zahl vor der Zahlung immer das Trinkgeld enthält.
 Prozent-Voreinstellungen werden aus der aktuellen Zwischensumme berechnet und bleiben daher
 korrekt, wenn sich der Warenkorb ändert.
 
-Alles liegt auf einem Bildschirm unter <strong>WooCommerce → Tipping</strong>: die Beschriftung und
+Alles liegt auf einem Bildschirm unter <strong>WooCommerce > Tipping</strong>: die Beschriftung und
 Beschreibung, die Käufer sehen, ob Voreinstellungen Festbeträge oder Prozentsätze sind, und
 die Voreinstellungswerte selbst.
 
@@ -51,9 +51,9 @@ einen Fehler melden oder einen Voreinstellungs-Workflow vorschlagen möchtest, d
 
 == Installation ==
 
-1. Lade das Plugin nach `/wp-content/plugins/plogins-tipping` hoch oder installiere es über Plugins → Installieren.
+1. Lade das Plugin nach `/wp-content/plugins/plogins-tipping` hoch oder installiere es über Plugins > Installieren.
 2. Aktiviere es. WooCommerce muss installiert und aktiv sein.
-3. Gehe zu <strong>WooCommerce → Tipping</strong>, aktiviere Trinkgeld und lege deine Voreinstellungen fest.
+3. Gehe zu <strong>WooCommerce > Tipping</strong>, aktiviere Trinkgeld und lege deine Voreinstellungen fest.
 
 == Frequently Asked Questions ==
 

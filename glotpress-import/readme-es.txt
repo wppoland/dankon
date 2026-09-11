@@ -22,7 +22,7 @@ así que la cifra que ven los clientes antes de pagar siempre incluye la propina
 Los preajustes porcentuales se calculan a partir del subtotal actual, por lo que siguen siendo
 correctos si el carrito cambia.
 
-Todo está en una sola pantalla en <strong>WooCommerce → Tipping</strong>: la etiqueta y la
+Todo está en una sola pantalla en <strong>WooCommerce > Tipping</strong>: la etiqueta y la
 descripción que ven los compradores, si los preajustes son importes fijos o porcentajes, y
 los propios valores preestablecidos.
 
@@ -51,9 +51,9 @@ informar de un error o sugerir un flujo de trabajo con preajustes que se nos hay
 
 == Installation ==
 
-1. Sube el plugin a `/wp-content/plugins/plogins-tipping` o instálalo desde Plugins → Añadir nuevo.
+1. Sube el plugin a `/wp-content/plugins/plogins-tipping` o instálalo desde Plugins > Añadir nuevo.
 2. Actívalo. WooCommerce debe estar instalado y activo.
-3. Ve a <strong>WooCommerce → Tipping</strong>, activa las propinas y configura tus preajustes.
+3. Ve a <strong>WooCommerce > Tipping</strong>, activa las propinas y configura tus preajustes.
 
 == Frequently Asked Questions ==
 
