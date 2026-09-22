@@ -112,7 +112,7 @@ final class TipControl implements HasHooks
             // int, so the shopper pressed a button labelled "3%" and was charged
             // 2.5% of the subtotal. Format it the way the admin already does.
             /* translators: %s: a percentage, e.g. 10 or 7.5. */
-            return sprintf(__('%s%%', 'plogins-tipping'), Options::formatNumber($value));
+            return sprintf(__('%s%%', 'dankon'), Options::formatNumber($value));
         }
 
         return wp_strip_all_tags(wc_price($value));

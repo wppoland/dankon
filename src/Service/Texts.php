@@ -31,8 +31,8 @@ final class Texts
     public static function defaults(): array
     {
         return [
-            'label'       => __('Add a tip', 'plogins-tipping'),
-            'description' => __('Support our team, every tip is appreciated. Choose an amount or skip.', 'plogins-tipping'),
+            'label'       => __('Add a tip', 'dankon'),
+            'description' => __('Support our team, every tip is appreciated. Choose an amount or skip.', 'dankon'),
         ];
     }
 

@@ -10,7 +10,7 @@
 defined('ABSPATH') || exit;
 
 return [
-    'name'       => 'Tipping Pro',
+    'name'       => 'Dankon Pro',
     'url'        => 'https://plogins.com/plogins-tipping-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,

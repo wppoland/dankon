@@ -1,11 +1,11 @@
-=== Plogins Tipping - Tips and Gratuity for WooCommerce ===
+=== Dankon - Tips and Gratuity for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, tips, donations, checkout, gratuity
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.13
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Let customers add an optional tip or donation at checkout: preset amounts, appli
 
 == Description ==
 
-Tipping adds an optional tip or donation control to the WooCommerce checkout.
+Dankon adds an optional tip or donation control to the WooCommerce checkout.
 Customers pick a preset amount, either a flat figure or a percentage of their
 order, and the tip is added to the order totals as a fee and saved on the order.
 
@@ -22,7 +22,7 @@ AJAX, so the figure customers see before they pay always includes the tip.
 Percentage presets are worked out from the current subtotal, so they stay
 correct if the cart changes.
 
-Everything lives on one screen under **WooCommerce > Tipping**: the label and
+Everything lives on one screen under **WooCommerce > Dankon Tips**: the label and
 description shoppers see, whether presets are fixed amounts or percentages, and
 the preset values themselves.
 
@@ -51,9 +51,9 @@ it, report a bug or suggest a preset workflow we have missed.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-tipping`, or install via Plugins > Add New.
+1. Upload the plugin to `/wp-content/plugins/dankon`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be installed and active.
-3. Go to **WooCommerce > Tipping**, enable tipping and set your presets.
+3. Go to **WooCommerce > Dankon Tips**, enable tipping and set your presets.
 
 == Frequently Asked Questions ==
 
@@ -89,19 +89,22 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 == Screenshots ==
 
 1. The tip control on the checkout page.
-2. The Tipping settings screen under WooCommerce.
+2. The Dankon settings screen under WooCommerce.
 
 == External Services ==
 
-Tipping does not connect to, send data to or load resources from any external service. It runs entirely on your own site.
+Dankon does not connect to, send data to or load resources from any external service. It runs entirely on your own site.
 
 The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the same origin, then WooCommerce recalculates the checkout totals; no third party is involved. Settings are kept in the `tipping_settings` option (with `tipping_db_version` tracking the schema), and each tip is recorded both as a native WooCommerce cart fee and as the `_tipping_amount` order meta. The plugin does not send any email of its own.
 
 == Translations ==
 
-Plogins Tipping is fully translatable and ships the `plogins-tipping.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
+Dankon is fully translatable and ships the `dankon.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.0 =
+* Renamed to Dankon. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Dankon is Esperanto for thank you. The text domain follows the name; the stored data, the settings and every hook are unchanged.
 
 = 1.0.13 =
 * Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
