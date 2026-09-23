@@ -21,12 +21,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: dankon.php
 msgid "Dankon - Tips and Gratuity for WooCommerce"
-msgstr ""
+msgstr "Dankon - napiwki dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: dankon.php
 msgid "https://plogins.com/plogins-tipping/"
-msgstr ""
+msgstr "https://plogins.com/plogins-tipping/"
 
 #. Description of the plugin
 #: dankon.php
@@ -38,17 +38,17 @@ msgstr ""
 #. Author of the plugin
 #: dankon.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: dankon.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: dankon.php:48
 msgid ""
 "Dankon - Tips and Gratuity for WooCommerce requires WooCommerce to be active."
-msgstr ""
+msgstr "Dankon - napiwki dla WooCommerce wymaga aktywnego WooCommerce."
 
 #: src/Admin/ProUpsell.php:78
 msgid "Wkrótce"
@@ -106,7 +106,7 @@ msgstr "Co dodaje %s"
 
 #: src/Admin/Settings.php:72 src/Admin/Settings.php:73
 msgid "Dankon Tips"
-msgstr ""
+msgstr "Napiwki Dankon"
 
 #: src/Admin/Settings.php:122
 msgid "Let customers add a tip or donation at checkout"
@@ -150,7 +150,7 @@ msgstr "Etykieta"
 msgid ""
 "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
 "shelter”. Leave empty to use the translated default shown in the field."
-msgstr ""
+msgstr "Nagłówek pokazywany nad przyciskami napiwku, np. \"Dodaj napiwek\" lub \"Wesprzyj nasze schronisko\". Pozostaw puste, aby użyć przetłumaczonej wartości domyślnej pokazanej w polu."
 
 #: src/Admin/Settings.php:157
 msgid "Description"
@@ -161,17 +161,17 @@ msgid ""
 "Optional supporting text shown under the label. Tipping is always optional "
 "for the customer. Leave empty to use the translated default shown in the "
 "field."
-msgstr ""
+msgstr "Opcjonalny tekst pomocniczy pokazywany pod etykietą. Napiwek jest dla klienta zawsze dobrowolny. Pozostaw puste, aby użyć przetłumaczonej wartości domyślnej pokazanej w polu."
 
 #: src/Admin/Settings.php:165
 msgid "Show the description"
-msgstr ""
+msgstr "Pokaż opis"
 
 #: src/Admin/Settings.php:168
 msgid ""
 "Untick to show the label on its own. Clearing the text box no longer hides "
 "it, because an empty box now means \"use the default wording\"."
-msgstr ""
+msgstr "Odznacz, aby pokazać samą etykietę. Wyczyszczenie pola tekstowego już jej nie ukrywa, ponieważ puste pole oznacza teraz \"użyj domyślnej treści\"."
 
 #: src/Admin/Settings.php:176
 msgid "Presets"
@@ -210,7 +210,7 @@ msgid ""
 "numbers like 5, 7.5, 10; for fixed amounts use currency values (2, 5, 10). "
 "Up to eight are shown; the rest are ignored. Leave empty and the control is "
 "hidden until you add at least one."
-msgstr ""
+msgstr "Wartości oddzielone przecinkami, dopuszczalne dwa miejsca po przecinku. Dla procentów użyj liczb takich jak 5, 7.5, 10; dla kwot stałych podaj wartości w walucie (2, 5, 10). Pokazywanych jest do ośmiu; reszta jest pomijana. Pozostaw puste, a element sterujący pozostanie ukryty, dopóki nie dodasz przynajmniej jednej."
 
 #: src/Admin/Settings.php:241
 msgid "Preview of the tip buttons"
@@ -229,7 +229,7 @@ msgstr "Dodaj napiwek"
 
 #: src/Service/Texts.php:35
 msgid "Support our team, every tip is appreciated. Choose an amount or skip."
-msgstr ""
+msgstr "Wesprzyj nasz zespół, każdy napiwek się liczy. Wybierz kwotę lub pomiń."
 
 #: templates/tip-control.php:51
 msgid "No tip"
