@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce "
 "0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tipping\n"
-"POT-Creation-Date: 2026-06-16T20:24:12+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dankon\n"
+"POT-Creation-Date: 2026-09-09T14:38:04+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:24:12+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -18,44 +18,102 @@ msgstr ""
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
-#: tipping.php
-msgid "Tipping - Checkout Tips and Donations for WooCommerce"
+#: dankon.php
+msgid "Dankon - Tips and Gratuity for WooCommerce"
 msgstr ""
-"Propinas: propinas y donaciones al finalizar la compra para WooCommerce"
 
 #. Plugin URI of the plugin
-#: tipping.php
-msgid "https://plogins.com/tipping/"
-msgstr "https://plogins.com/es/tipping/"
+#: dankon.php
+msgid "https://plogins.com/plogins-tipping/"
+msgstr ""
 
 #. Description of the plugin
-#: tipping.php
+#: dankon.php
 msgid "Let customers add an optional tip or donation at checkout."
 msgstr ""
 "Permita que los clientes agreguen una propina o donación opcional al "
 "finalizar la compra."
 
 #. Author of the plugin
-#: tipping.php
-msgid "WPPoland"
-msgstr "WPPoland"
+#: dankon.php
+msgid "WPPoland.com"
+msgstr ""
 
 #. Author URI of the plugin
-#: tipping.php
-msgid "https://plogins.com/"
-msgstr "https://plogins.com/"
+#: dankon.php
+msgid "https://wppoland.com"
+msgstr ""
 
-#: src/Admin/Settings.php:63 src/Admin/Settings.php:64
-msgid "Tipping"
-msgstr "Propinas"
+#: dankon.php:48
+msgid ""
+"Dankon - Tips and Gratuity for WooCommerce requires WooCommerce to be active."
+msgstr ""
 
-#: src/Admin/Settings.php:103
+#: src/Admin/ProUpsell.php:78
+msgid "Wkrótce"
+msgstr "Próximamente"
+
+#: src/Admin/ProUpsell.php:78
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#. translators: 1: currency symbol, 2: yearly price
+#: src/Admin/ProUpsell.php:84
+#, php-format
+msgid "from %1$s%2$d/yr"
+msgstr "desde %1$s%2$d/año"
+
+#: src/Admin/ProUpsell.php:93
+msgid "Upgrade to PRO"
+msgstr "Mejora a PRO"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Powiadom mnie"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:94
+msgid "Get notified"
+msgstr "Avísame"
+
+#: src/Admin/ProUpsell.php:124
+msgid "Permission denied."
+msgstr "Permiso denegado."
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:154
+#, php-format
+msgid "Do more with %s"
+msgstr "Haz más con %s"
+
+#: src/Admin/ProUpsell.php:161
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#: src/Admin/ProUpsell.php:178
+msgid "Unlock every PRO feature"
+msgstr "Desbloquea todas las funciones PRO"
+
+#: src/Admin/ProUpsell.php:191
+msgid "one licence, every PRO feature"
+msgstr "una licencia, todas las funciones PRO"
+
+#. translators: %s: PRO edition name
+#: src/Admin/ProUpsell.php:210
+#, php-format
+msgid "What %s adds"
+msgstr "Lo que añade %s"
+
+#: src/Admin/Settings.php:72 src/Admin/Settings.php:73
+msgid "Dankon Tips"
+msgstr ""
+
+#: src/Admin/Settings.php:122
 msgid "Let customers add a tip or donation at checkout"
 msgstr ""
 "Permita que los clientes agreguen una propina o una donación al finalizar la "
 "compra"
 
-#: src/Admin/Settings.php:105
+#: src/Admin/Settings.php:124
 msgid ""
 "A friendly, optional tip control on the checkout. Pick preset amounts, fixed "
 "or a percentage of the order, and the tip is added to the order totals as a "
@@ -66,70 +124,73 @@ msgstr ""
 "los totales del pedido como una tarifa. Las actualizaciones se transmiten "
 "según lo elija el cliente."
 
-#: src/Admin/Settings.php:113
+#: src/Admin/Settings.php:133
 msgid "General"
 msgstr "General"
 
-#: src/Admin/Settings.php:117
+#: src/Admin/Settings.php:137
 msgid "Enable tipping"
 msgstr "Habilitar propinas"
 
-#: src/Admin/Settings.php:121
+#: src/Admin/Settings.php:141
 msgid "Show the tip control on the checkout."
 msgstr "Muestra el control de propinas en la caja."
 
-#: src/Admin/Settings.php:123
+#: src/Admin/Settings.php:143
 msgid ""
 "When off, the control never renders and no assets load on the storefront."
 msgstr ""
 "Cuando está desactivado, el control nunca se procesa y no se cargan activos "
 "en el escaparate."
 
-#: src/Admin/Settings.php:128
+#: src/Admin/Settings.php:148
 msgid "Label"
 msgstr "Etiqueta"
 
-#: src/Admin/Settings.php:131 src/Settings/Options.php:64
-msgid "Add a tip"
-msgstr "Añadir una propina"
-
-#: src/Admin/Settings.php:132
+#: src/Admin/Settings.php:152
 msgid ""
 "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
-"shelter”."
+"shelter”. Leave empty to use the translated default shown in the field."
 msgstr ""
-"El título que se muestra encima de los botones de propina, p. ej. “Añade una "
-"propina” o “Apoya nuestro refugio”."
 
-#: src/Admin/Settings.php:137
+#: src/Admin/Settings.php:157
 msgid "Description"
 msgstr "Descripción"
 
-#: src/Admin/Settings.php:141
+#: src/Admin/Settings.php:161
 msgid ""
 "Optional supporting text shown under the label. Tipping is always optional "
-"for the customer."
+"for the customer. Leave empty to use the translated default shown in the "
+"field."
 msgstr ""
-"Texto de respaldo opcional que se muestra debajo de la etiqueta. La propina "
-"siempre es opcional para el cliente."
 
-#: src/Admin/Settings.php:149
+#: src/Admin/Settings.php:165
+msgid "Show the description"
+msgstr ""
+
+#: src/Admin/Settings.php:168
+msgid ""
+"Untick to show the label on its own. Clearing the text box no longer hides "
+"it, because an empty box now means \"use the default wording\"."
+msgstr ""
+
+#: src/Admin/Settings.php:176
 msgid "Presets"
 msgstr "Preajustes"
 
-#: src/Admin/Settings.php:154
+#: src/Admin/Settings.php:181
 msgid "Preset type"
 msgstr "Tipo preestablecido"
 
-#: src/Admin/Settings.php:158
+#: src/Admin/Settings.php:185
 msgid "Percentage of cart"
 msgstr "Porcentaje del carrito"
 
-#: src/Admin/Settings.php:159
+#: src/Admin/Settings.php:186
 msgid "Fixed amount"
 msgstr "Cantidad fija"
 
-#: src/Admin/Settings.php:161
+#: src/Admin/Settings.php:188
 msgid ""
 "Percentage presets scale with the cart: a 5 preset adds 5% of the subtotal, "
 "so a larger order means a larger tip. Fixed presets stay the same flat "
@@ -141,101 +202,89 @@ msgstr ""
 "misma cantidad fija en la moneda de su tienda, independientemente del total "
 "del carrito."
 
-#: src/Admin/Settings.php:166
+#: src/Admin/Settings.php:193
 msgid "Preset values"
 msgstr "Valores preestablecidos"
 
-#: src/Admin/Settings.php:170
+#: src/Admin/Settings.php:197
 msgid ""
-"Comma-separated values. For percentages use whole numbers (5, 10, 15); for "
-"fixed amounts use currency values (2, 5, 10). Up to eight are shown; the "
-"rest are ignored. Leave empty and the control is hidden until you add at "
-"least one."
+"Comma-separated values, decimals allowed to two places. For percentages use "
+"numbers like 5, 7.5, 10; for fixed amounts use currency values (2, 5, 10). "
+"Up to eight are shown; the rest are ignored. Leave empty and the control is "
+"hidden until you add at least one."
 msgstr ""
-"Valores separados por comas. Para porcentajes utilice números enteros (5, "
-"10, 15); para importes fijos utilice valores de moneda (2, 5, 10). Se "
-"muestran hasta ocho; el resto se ignora. Déjelo vacío y el control quedará "
-"oculto hasta que añade al menos uno."
 
-#: src/Admin/Settings.php:209
+#: src/Admin/Settings.php:241
 msgid "Preview of the tip buttons"
 msgstr "Vista previa de los botones de sugerencias"
 
-#. translators: %s: a whole-number percentage, e.g. 5.
-#. translators: %s: a whole-number percentage, e.g. 10.
-#: src/Admin/Settings.php:215 src/Frontend/TipControl.php:108
+#. translators: %s: a percentage, e.g. 5 or 7.5.
+#. translators: %s: a percentage, e.g. 10 or 7.5.
+#: src/Admin/Settings.php:247 src/Frontend/TipControl.php:115
 #, php-format
 msgid "%s%%"
 msgstr "%s%%"
 
-#: templates/tip-control.php:38
+#: src/Service/Texts.php:34
+msgid "Add a tip"
+msgstr "Añadir una propina"
+
+#: src/Service/Texts.php:35
+msgid "Support our team, every tip is appreciated. Choose an amount or skip."
+msgstr ""
+
+#: templates/tip-control.php:51
 msgid "No tip"
 msgstr "Sin propina"
 
-#: tipping.php:47
-msgid ""
-"Tipping - Checkout Tips and Donations for WooCommerce requires WooCommerce "
-"to be active."
-msgstr ""
-"Propinas: las propinas y donaciones al finalizar la compra para WooCommerce "
-"requieren que WooCommerce esté activo."
+#~ msgid "Tipping - Checkout Tips and Donations for WooCommerce"
+#~ msgstr ""
+#~ "Propinas: propinas y donaciones al finalizar la compra para WooCommerce"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Próximamente"
+#~ msgid "https://plogins.com/tipping/"
+#~ msgstr "https://plogins.com/es/tipping/"
 
-#: src/Admin/ProUpsell.php:78
-msgid "Coming soon"
-msgstr "Próximamente"
+#~ msgid "WPPoland"
+#~ msgstr "WPPoland"
 
-#. translators: %d: yearly price in PLN
-#: src/Admin/ProUpsell.php:83
+#~ msgid "https://plogins.com/"
+#~ msgstr "https://plogins.com/"
+
+#~ msgid "Tipping"
+#~ msgstr "Propinas"
+
+#~ msgid ""
+#~ "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
+#~ "shelter”."
+#~ msgstr ""
+#~ "El título que se muestra encima de los botones de propina, p. ej. “Añade "
+#~ "una propina” o “Apoya nuestro refugio”."
+
+#~ msgid ""
+#~ "Optional supporting text shown under the label. Tipping is always "
+#~ "optional for the customer."
+#~ msgstr ""
+#~ "Texto de respaldo opcional que se muestra debajo de la etiqueta. La "
+#~ "propina siempre es opcional para el cliente."
+
+#~ msgid ""
+#~ "Comma-separated values. For percentages use whole numbers (5, 10, 15); "
+#~ "for fixed amounts use currency values (2, 5, 10). Up to eight are shown; "
+#~ "the rest are ignored. Leave empty and the control is hidden until you add "
+#~ "at least one."
+#~ msgstr ""
+#~ "Valores separados por comas. Para porcentajes utilice números enteros (5, "
+#~ "10, 15); para importes fijos utilice valores de moneda (2, 5, 10). Se "
+#~ "muestran hasta ocho; el resto se ignora. Déjelo vacío y el control "
+#~ "quedará oculto hasta que añade al menos uno."
+
+#~ msgid ""
+#~ "Tipping - Checkout Tips and Donations for WooCommerce requires "
+#~ "WooCommerce to be active."
+#~ msgstr ""
+#~ "Propinas: las propinas y donaciones al finalizar la compra para "
+#~ "WooCommerce requieren que WooCommerce esté activo."
+
 #, php-format
-msgid "od %d zł/rok"
-msgstr "desde %d zł/año"
-
-#. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:88
-#, php-format
-msgid "from %1$s%2$d/yr"
-msgstr "desde %1$s%2$d/año"
-
-#: src/Admin/ProUpsell.php:97
-msgid "Upgrade to PRO"
-msgstr "Mejora a PRO"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Powiadom mnie"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:98
-msgid "Get notified"
-msgstr "Avísame"
-
-#: src/Admin/ProUpsell.php:128
-msgid "Permission denied."
-msgstr "Permiso denegado."
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:158
-#, php-format
-msgid "Do more with %s"
-msgstr "Haz más con %s"
-
-#: src/Admin/ProUpsell.php:165
-msgid "Dismiss this notice"
-msgstr "Descartar este aviso"
-
-#: src/Admin/ProUpsell.php:182
-msgid "Unlock every PRO feature"
-msgstr "Desbloquea todas las funciones PRO"
-
-#: src/Admin/ProUpsell.php:195
-msgid "one licence, every PRO feature"
-msgstr "una licencia, todas las funciones PRO"
-
-#. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:214
-#, php-format
-msgid "What %s adds"
-msgstr "Lo que añade %s"
+#~ msgid "od %d zł/rok"
+#~ msgstr "desde %d zł/año"
