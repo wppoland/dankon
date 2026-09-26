@@ -7,6 +7,7 @@ namespace Tipping\Admin;
 defined('ABSPATH') || exit;
 
 use Tipping\Contract\HasHooks;
+use Tipping\Service\Texts;
 use Tipping\Settings\Options;
 
 /**
@@ -68,8 +69,8 @@ final class Settings implements HasHooks
     {
         add_submenu_page(
             'woocommerce',
-            __('Tipping', 'plogins-tipping'),
-            __('Tipping', 'plogins-tipping'),
+            __('Dankon Tips', 'dankon'),
+            __('Dankon Tips', 'dankon'),
             'manage_woocommerce',
             self::PAGE,
             [$this, 'renderPage'],
@@ -100,9 +101,17 @@ final class Settings implements HasHooks
             return;
         }
 
+        // Deliberately the RAW settings, never Options::resolved(): an empty text
+        // field must stay empty here. Rendering the resolved default into the
+        // input would save the merchant's current language back into the option
+        // on the next submit and freeze it there.
         $settings = $this->options->all();
         $type     = $this->options->type();
         $presets  = $this->options->presets();
+
+        // Shown as placeholders instead, so the merchant can read the default
+        // they get when they leave a field empty, in their own language.
+        $textDefaults = Texts::defaults();
         ?>
         <div class="wrap tipping-admin">
             <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
@@ -110,9 +119,9 @@ final class Settings implements HasHooks
             <?php $this->proUpsell()->banner(); ?>
 
             <div class="tipping-admin__intro">
-                <h2><?php esc_html_e('Let customers add a tip or donation at checkout', 'plogins-tipping'); ?></h2>
+                <h2><?php esc_html_e('Let customers add a tip or donation at checkout', 'dankon'); ?></h2>
                 <p>
-                    <?php esc_html_e('A friendly, optional tip control on the checkout. Pick preset amounts, fixed or a percentage of the order, and the tip is added to the order totals as a fee. Updates live as the customer chooses.', 'plogins-tipping'); ?>
+                    <?php esc_html_e('A friendly, optional tip control on the checkout. Pick preset amounts, fixed or a percentage of the order, and the tip is added to the order totals as a fee. Updates live as the customer chooses.', 'dankon'); ?>
                 </p>
             </div>
 
@@ -121,35 +130,42 @@ final class Settings implements HasHooks
                 <?php settings_fields(self::PAGE); ?>
 
                 <div class="tipping-admin__card">
-                    <h2><?php esc_html_e('General', 'plogins-tipping'); ?></h2>
+                    <h2><?php esc_html_e('General', 'dankon'); ?></h2>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Enable tipping', 'plogins-tipping'); ?></th>
+                                <th scope="row"><?php esc_html_e('Enable tipping', 'dankon'); ?></th>
                                 <td>
                                     <label for="tipping_enabled">
                                         <input type="checkbox" id="tipping_enabled" name="<?php echo esc_attr(Options::OPTION); ?>[enabled]" value="1" <?php checked($this->options->isEnabled(), true); ?> />
-                                        <?php esc_html_e('Show the tip control on the checkout.', 'plogins-tipping'); ?>
+                                        <?php esc_html_e('Show the tip control on the checkout.', 'dankon'); ?>
                                     </label>
-                                    <p class="description"><?php esc_html_e('When off, the control never renders and no assets load on the storefront.', 'plogins-tipping'); ?></p>
+                                    <p class="description"><?php esc_html_e('When off, the control never renders and no assets load on the storefront.', 'dankon'); ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="tipping_label"><?php esc_html_e('Label', 'plogins-tipping'); ?></label>
+                                    <label for="tipping_label"><?php esc_html_e('Label', 'dankon'); ?></label>
                                 </th>
                                 <td>
-                                    <input type="text" id="tipping_label" name="<?php echo esc_attr(Options::OPTION); ?>[label]" value="<?php echo esc_attr((string) ($settings['label'] ?? '')); ?>" class="regular-text" placeholder="<?php esc_attr_e('Add a tip', 'plogins-tipping'); ?>" />
-                                    <p class="description"><?php esc_html_e('The heading shown above the tip buttons, e.g. “Add a tip” or “Support our shelter”.', 'plogins-tipping'); ?></p>
+                                    <input type="text" id="tipping_label" name="<?php echo esc_attr(Options::OPTION); ?>[label]" value="<?php echo esc_attr((string) ($settings['label'] ?? '')); ?>" class="regular-text" placeholder="<?php echo esc_attr($textDefaults['label']); ?>" />
+                                    <p class="description"><?php esc_html_e('The heading shown above the tip buttons, e.g. “Add a tip” or “Support our shelter”. Leave empty to use the translated default shown in the field.', 'dankon'); ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="tipping_description"><?php esc_html_e('Description', 'plogins-tipping'); ?></label>
+                                    <label for="tipping_description"><?php esc_html_e('Description', 'dankon'); ?></label>
                                 </th>
                                 <td>
-                                    <textarea id="tipping_description" name="<?php echo esc_attr(Options::OPTION); ?>[description]" rows="2" class="large-text"><?php echo esc_textarea((string) ($settings['description'] ?? '')); ?></textarea>
-                                    <p class="description"><?php esc_html_e('Optional supporting text shown under the label. Tipping is always optional for the customer.', 'plogins-tipping'); ?></p>
+                                    <textarea id="tipping_description" name="<?php echo esc_attr(Options::OPTION); ?>[description]" rows="2" class="large-text" placeholder="<?php echo esc_attr($textDefaults['description']); ?>"><?php echo esc_textarea((string) ($settings['description'] ?? '')); ?></textarea>
+                                    <p class="description"><?php esc_html_e('Optional supporting text shown under the label. Tipping is always optional for the customer. Leave empty to use the translated default shown in the field.', 'dankon'); ?></p>
+                                    <p>
+                                        <label for="tipping_show_description">
+                                            <input type="checkbox" id="tipping_show_description" name="<?php echo esc_attr(Options::OPTION); ?>[show_description]" value="1" <?php checked($this->options->showDescription(), true); ?> />
+                                            <?php esc_html_e('Show the description', 'dankon'); ?>
+                                        </label>
+                                    </p>
+                                    <p class="description"><?php esc_html_e('Untick to show the label on its own. Clearing the text box no longer hides it, because an empty box now means "use the default wording".', 'dankon'); ?></p>
                                 </td>
                             </tr>
                         </tbody>
@@ -157,28 +173,28 @@ final class Settings implements HasHooks
                 </div>
 
                 <div class="tipping-admin__card">
-                    <h2><?php esc_html_e('Presets', 'plogins-tipping'); ?></h2>
+                    <h2><?php esc_html_e('Presets', 'dankon'); ?></h2>
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
                                 <th scope="row">
-                                    <label for="tipping_type"><?php esc_html_e('Preset type', 'plogins-tipping'); ?></label>
+                                    <label for="tipping_type"><?php esc_html_e('Preset type', 'dankon'); ?></label>
                                 </th>
                                 <td>
                                     <select id="tipping_type" name="<?php echo esc_attr(Options::OPTION); ?>[type]">
-                                        <option value="percent" <?php selected($type, 'percent'); ?>><?php esc_html_e('Percentage of cart', 'plogins-tipping'); ?></option>
-                                        <option value="fixed" <?php selected($type, 'fixed'); ?>><?php esc_html_e('Fixed amount', 'plogins-tipping'); ?></option>
+                                        <option value="percent" <?php selected($type, 'percent'); ?>><?php esc_html_e('Percentage of cart', 'dankon'); ?></option>
+                                        <option value="fixed" <?php selected($type, 'fixed'); ?>><?php esc_html_e('Fixed amount', 'dankon'); ?></option>
                                     </select>
-                                    <p class="description"><?php esc_html_e('Percentage presets scale with the cart: a 5 preset adds 5% of the subtotal, so a larger order means a larger tip. Fixed presets stay the same flat amount in your store currency whatever the cart total.', 'plogins-tipping'); ?></p>
+                                    <p class="description"><?php esc_html_e('Percentage presets scale with the cart: a 5 preset adds 5% of the subtotal, so a larger order means a larger tip. Fixed presets stay the same flat amount in your store currency whatever the cart total.', 'dankon'); ?></p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="tipping_presets"><?php esc_html_e('Preset values', 'plogins-tipping'); ?></label>
+                                    <label for="tipping_presets"><?php esc_html_e('Preset values', 'dankon'); ?></label>
                                 </th>
                                 <td>
                                     <input type="text" id="tipping_presets" name="<?php echo esc_attr(Options::OPTION); ?>[presets]" value="<?php echo esc_attr(implode(', ', array_map([$this, 'formatNumber'], $presets))); ?>" class="regular-text" placeholder="5, 10, 15" />
-                                    <p class="description"><?php esc_html_e('Comma-separated values. For percentages use whole numbers (5, 10, 15); for fixed amounts use currency values (2, 5, 10). Up to eight are shown; the rest are ignored. Leave empty and the control is hidden until you add at least one.', 'plogins-tipping'); ?></p>
+                                    <p class="description"><?php esc_html_e('Comma-separated values, decimals allowed to two places. For percentages use numbers like 5, 7.5, 10; for fixed amounts use currency values (2, 5, 10). Up to eight are shown; the rest are ignored. Leave empty and the control is hidden until you add at least one.', 'dankon'); ?></p>
                                     <?php $this->renderPresetPreview($type, $presets); ?>
                                 </td>
                             </tr>
@@ -222,13 +238,13 @@ final class Settings implements HasHooks
         }
 
         ?>
-        <ul class="tipping-admin__example" aria-label="<?php esc_attr_e('Preview of the tip buttons', 'plogins-tipping'); ?>">
+        <ul class="tipping-admin__example" aria-label="<?php esc_attr_e('Preview of the tip buttons', 'dankon'); ?>">
             <?php foreach ($presets as $preset) : ?>
                 <li class="tipping-admin__pill">
                     <?php
                     if ('percent' === $type) {
-                        /* translators: %s: a whole-number percentage, e.g. 5. */
-                        echo esc_html(sprintf(__('%s%%', 'plogins-tipping'), $this->formatNumber($preset)));
+                        /* translators: %s: a percentage, e.g. 5 or 7.5. */
+                        echo esc_html(sprintf(__('%s%%', 'dankon'), $this->formatNumber($preset)));
                     } else {
                         echo wp_kses_post(wc_price($preset));
                     }
@@ -260,6 +276,7 @@ final class Settings implements HasHooks
             'enabled'     => ! empty($raw['enabled']),
             'label'       => isset($raw['label']) ? sanitize_text_field((string) $raw['label']) : '',
             'description' => isset($raw['description']) ? sanitize_textarea_field((string) $raw['description']) : '',
+            'show_description' => ! empty($raw['show_description']),
             'type'        => $type,
             'presets'     => $this->parsePresets($raw['presets'] ?? ''),
         ];
@@ -303,10 +320,6 @@ final class Settings implements HasHooks
      */
     public function formatNumber(float $value): string
     {
-        if (floor($value) === $value) {
-            return (string) (int) $value;
-        }
-
-        return rtrim(rtrim(number_format($value, 2, '.', ''), '0'), '.');
+        return Options::formatNumber($value);
     }
 }

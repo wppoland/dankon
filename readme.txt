@@ -1,11 +1,11 @@
-=== Tipping - Tips and Gratuity for WooCommerce ===
+=== Dankon - Tips and Gratuity for WooCommerce ===
 Contributors: motylanogha
 Tags: woocommerce, tips, donations, checkout, gratuity
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.0.5
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Let customers add an optional tip or donation at checkout: preset amounts, appli
 
 == Description ==
 
-Tipping adds an optional tip or donation control to the WooCommerce checkout.
+Dankon adds an optional tip or donation control to the WooCommerce checkout.
 Customers pick a preset amount, either a flat figure or a percentage of their
 order, and the tip is added to the order totals as a fee and saved on the order.
 
@@ -22,19 +22,19 @@ AJAX, so the figure customers see before they pay always includes the tip.
 Percentage presets are worked out from the current subtotal, so they stay
 correct if the cart changes.
 
-Everything lives on one screen under **WooCommerce → Tipping**: the label and
+Everything lives on one screen under **WooCommerce > Dankon Tips**: the label and
 description shoppers see, whether presets are fixed amounts or percentages, and
 the preset values themselves.
 
-The code is on GitHub at https://github.com/wppoland/plogins-tipping if you want to read
+The code is on GitHub at [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping) if you want to read
 it, report a bug or suggest a preset workflow we have missed.
 
 = Documentation and links =
 
-* **Documentation** - https://plogins.com/plogins-tipping/docs/
-* **Plugin page** - https://plogins.com/plogins-tipping/
-* **Source code** - https://github.com/wppoland/plogins-tipping
-* **Bug reports and feature requests** - https://github.com/wppoland/plogins-tipping/issues
+* **Documentation**: [plogins.com/plogins-tipping/docs/](https://plogins.com/plogins-tipping/docs/)
+* **Plugin page**: [plogins.com/plogins-tipping/](https://plogins.com/plogins-tipping/)
+* **Source code**: [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping)
+* **Bug reports and feature requests**: [github.com/wppoland/plogins-tipping/issues](https://github.com/wppoland/plogins-tipping/issues)
 
 
 = Features =
@@ -45,15 +45,15 @@ it, report a bug or suggest a preset workflow we have missed.
 * Editable label and description.
 * Opt-in by default: "No tip" is preselected, and tips are added as a non-taxable fee.
 * Renders nothing when tipping is disabled or no presets are set, so the checkout is never cluttered with an empty control.
-* Buttons are keyboard operable, with a visible focus ring, an ARIA live status line and reduced-motion handling.
+* Buttons are keyboard operable, with a visible focus ring and reduced-motion handling.
 * Ships with a POT file for translation and removes its option on uninstall.
 * Declares HPOS compatibility. The control renders on the classic (shortcode) checkout.
 
 == Installation ==
 
-1. Upload the plugin to `/wp-content/plugins/plogins-tipping`, or install via Plugins → Add New.
+1. Upload the plugin to `/wp-content/plugins/dankon`, or install via Plugins > Add New.
 2. Activate it. WooCommerce must be installed and active.
-3. Go to **WooCommerce → Tipping**, enable tipping and set your presets.
+3. Go to **WooCommerce > Dankon Tips**, enable tipping and set your presets.
 
 == Frequently Asked Questions ==
 
@@ -89,19 +89,53 @@ Yes. This plugin is compatible with WordPress Multisite. Network activate it or 
 == Screenshots ==
 
 1. The tip control on the checkout page.
-2. The Tipping settings screen under WooCommerce.
+2. The Dankon settings screen under WooCommerce.
 
 == External Services ==
 
-Tipping does not connect to, send data to or load resources from any external service. It runs entirely on your own site.
+Dankon does not connect to, send data to or load resources from any external service. It runs entirely on your own site.
 
 The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the same origin, then WooCommerce recalculates the checkout totals; no third party is involved. Settings are kept in the `tipping_settings` option (with `tipping_db_version` tracking the schema), and each tip is recorded both as a native WooCommerce cart fee and as the `_tipping_amount` order meta. The plugin does not send any email of its own.
 
 == Translations ==
 
-Plogins Tipping includes Polish, German and Spanish translations for the plugin interface. The text domain is `plogins-tipping`, so WordPress.org language packs can also override or extend these bundled translations.
+Dankon is fully translatable and ships the `dankon.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.1 =
+* The sidebar upgrade promo now follows the same dismissal as the banner. Dismissing the banner used to leave a full-height advert on the settings screen for good, which is not what the WordPress.org guideline on upgrade prompts means by used with moderation.
+
+= 1.1.0 =
+* Renamed to Dankon. The WordPress.org review team asks a plugin name to lead with a distinctive, coined identifier rather than a generic descriptive word. Dankon is Esperanto for thank you. The text domain follows the name; the stored data, the settings and every hook are unchanged.
+
+= 1.0.13 =
+* Fixed: the PRO upgrade promo kept selling to people who had already bought the paid edition. Only the banner could be dismissed, so the sidebar promo and the locked feature cards followed a paying customer around for good. The promo now checks whether the paid edition is active and steps aside when it is.
+* Fixed: arrow glyphs in the admin menu paths, and in the strings handed to translators. An arrow inside a translatable string makes the glyph every translator's problem and changes the layout in any locale that drops it.
+
+= 1.0.12 =
+* Fixed: deleting the plugin left the per-user "dismiss" flag from the PRO notice in the database. Uninstall now removes it for every user, not just the one who dismissed it.
+
+= 1.0.11 =
+* The translation template was regenerated. 2 strings added to the plugin since the template was last built were missing from it, so no translator could reach them in any language. Nothing you see changes; what a translator can see does.
+
+= 1.0.10 =
+* Fixed the tip label and the supporting description staying English on a shop that is not in English. Both were plain strings in a config file rather than translatable ones, so they never reached the translation template and no language pack could replace them. On a Polish, German or Spanish checkout the shopper saw "Add a tip" and the English sentence under it, and the same English label was used for the tip line in the order totals and in order emails.
+* Both texts are translatable now and follow the site language as soon as a translation for them exists. Translations arrive as WordPress.org language packs rather than in this download, so on a site with no pack for this plugin they stay English until one is published. If you typed your own wording (including your own translation), it is kept exactly as you saved it and nothing changes for you.
+* The Label and Description fields in the Tipping settings now show the translated default as a placeholder. Leaving a field empty means "use the default in the site language" instead of freezing one language into the database.
+
+= 1.0.9 =
+* Renamed to Plogins Tipping - Tips and Gratuity for WooCommerce so the name leads with the brand rather than a generic word, which is what the WordPress.org plugin review team asks for. The plugin slug is unchanged.
+
+= 1.0.8 =
+* Tested against WordPress 7.1. Verified by activating this build on a clean 7.1 install with WooCommerce 11.1, not by editing the header.
+
+= 1.0.7 =
+* Fixed the PRO promo on the settings screen quoting a price in PLN. PRO is priced and charged in EUR, so an admin on a Polish site was shown a zloty amount and then billed in euro, and the zloty figure was a fixed conversion that drifted from the real charge as the rate moved. The promo now shows the euro price that is actually taken.
+
+= 1.0.6 =
+* Decimal percentage presets now show correctly on the checkout: a 2.5 preset is offered as "2.5%" instead of being rounded up to "3%" on the button while 2.5% was charged.
+* The preset values help text now says decimals are allowed.
 
 = 1.0.4 =
 * Translations: completed Polish, German and Spanish for the PRO upgrade panel.

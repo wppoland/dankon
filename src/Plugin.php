@@ -51,7 +51,7 @@ final class Plugin
         }
 
         /**
-         * Fires after the FREE Tipping plugin has fully booted and all of its
+         * Fires after the FREE Dankon plugin has fully booted and all of its
          * services are registered. PRO add-ons listen here to extend the shared
          * container and register their own hooks.
          *

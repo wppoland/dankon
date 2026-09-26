@@ -22,7 +22,7 @@ więc kwota widoczna przed zapłatą zawsze uwzględnia napiwek.
 Wstępnie ustawione wartości procentowe są liczone od bieżącej sumy częściowej, więc pozostają
 poprawne, gdy koszyk się zmienia.
 
-Wszystko jest na jednym ekranie w <strong>WooCommerce → Tipping</strong>: etykieta i
+Wszystko jest na jednym ekranie w <strong>WooCommerce > Tipping</strong>: etykieta i
 opis widoczne dla kupujących, to, czy ustawienia wstępne to kwoty stałe czy procentowe, oraz
 same wartości wstępne.
 
@@ -51,9 +51,9 @@ zgłosić błąd lub zaproponować przepływ pracy z ustawieniami wstępnymi, kt
 
 == Installation ==
 
-1. Prześlij wtyczkę do `/wp-content/plugins/plogins-tipping` lub zainstaluj przez Wtyczki → Dodaj nową.
+1. Prześlij wtyczkę do `/wp-content/plugins/plogins-tipping` lub zainstaluj przez Wtyczki > Dodaj nową.
 2. Włącz ją. WooCommerce musi być zainstalowane i aktywne.
-3. Przejdź do <strong>WooCommerce → Tipping</strong>, włącz napiwki i ustaw wartości wstępne.
+3. Przejdź do <strong>WooCommerce > Tipping</strong>, włącz napiwki i ustaw wartości wstępne.
 
 == Frequently Asked Questions ==
 
