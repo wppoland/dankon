@@ -2,10 +2,9 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce "
-"0.1.0\n"
+"Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dankon\n"
-"POT-Creation-Date: 2026-09-09T14:38:04+00:00\n"
+"POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
 "PO-Revision-Date: 2026-06-16T20:24:12+00:00\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
@@ -20,12 +19,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: dankon.php
 msgid "Dankon - Tips and Gratuity for WooCommerce"
-msgstr ""
+msgstr "Dankon - Trinkgeld für WooCommerce"
 
 #. Plugin URI of the plugin
 #: dankon.php
 msgid "https://plogins.com/plogins-tipping/"
-msgstr ""
+msgstr "https://plogins.com/plogins-tipping/"
 
 #. Description of the plugin
 #: dankon.php
@@ -37,75 +36,68 @@ msgstr ""
 #. Author of the plugin
 #: dankon.php
 msgid "WPPoland.com"
-msgstr ""
+msgstr "WPPoland.com"
 
 #. Author URI of the plugin
 #: dankon.php
 msgid "https://wppoland.com"
-msgstr ""
+msgstr "https://wppoland.com"
 
 #: dankon.php:48
 msgid ""
-"Dankon - Tips and Gratuity for WooCommerce requires WooCommerce to be active."
-msgstr ""
+"Dankon - Tips and Gratuity for WooCommerce requires WooCommerce to be "
+"active."
+msgstr "Dankon - Trinkgeld für WooCommerce erfordert ein aktives WooCommerce."
 
-#: src/Admin/ProUpsell.php:78
-msgid "Wkrótce"
-msgstr "Demnächst"
-
-#: src/Admin/ProUpsell.php:78
+#: src/Admin/ProUpsell.php:85
 msgid "Coming soon"
 msgstr "Demnächst"
 
 #. translators: 1: currency symbol, 2: yearly price
-#: src/Admin/ProUpsell.php:84
+#: src/Admin/ProUpsell.php:91
 #, php-format
 msgid "from %1$s%2$d/yr"
 msgstr "ab %1$s%2$d/Jahr"
 
-#: src/Admin/ProUpsell.php:93
+#: src/Admin/ProUpsell.php:100
 msgid "Upgrade to PRO"
 msgstr "Auf PRO upgraden"
 
-#: src/Admin/ProUpsell.php:94
-msgid "Powiadom mnie"
-msgstr "Benachrichtige mich"
-
-#: src/Admin/ProUpsell.php:94
+#: src/Admin/ProUpsell.php:101
 msgid "Get notified"
 msgstr "Benachrichtige mich"
 
-#: src/Admin/ProUpsell.php:124
+#: src/Admin/ProUpsell.php:131
 msgid "Permission denied."
 msgstr "Zugriff verweigert."
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:154
+#: src/Admin/ProUpsell.php:161
 #, php-format
 msgid "Do more with %s"
 msgstr "Mehr erreichen mit %s"
 
-#: src/Admin/ProUpsell.php:161
+#: src/Admin/ProUpsell.php:168
 msgid "Dismiss this notice"
 msgstr "Diesen Hinweis ausblenden"
 
-#: src/Admin/ProUpsell.php:178
+#: src/Admin/ProUpsell.php:190
 msgid "Unlock every PRO feature"
 msgstr "Alle PRO-Funktionen freischalten"
 
-#: src/Admin/ProUpsell.php:191
+#: src/Admin/ProUpsell.php:203
 msgid "one licence, every PRO feature"
 msgstr "eine Lizenz, alle PRO-Funktionen"
 
 #. translators: %s: PRO edition name
-#: src/Admin/ProUpsell.php:210
+#: src/Admin/ProUpsell.php:222
 #, php-format
 msgid "What %s adds"
 msgstr "Was %s ergänzt"
 
 #: src/Admin/Settings.php:72 src/Admin/Settings.php:73
 msgid "Dankon Tips"
-msgstr ""
+msgstr "Dankon Trinkgeld"
 
 #: src/Admin/Settings.php:122
 msgid "Let customers add a tip or donation at checkout"
@@ -115,9 +107,9 @@ msgstr ""
 
 #: src/Admin/Settings.php:124
 msgid ""
-"A friendly, optional tip control on the checkout. Pick preset amounts, fixed "
-"or a percentage of the order, and the tip is added to the order totals as a "
-"fee. Updates live as the customer chooses."
+"A friendly, optional tip control on the checkout. Pick preset amounts, fixed"
+" or a percentage of the order, and the tip is added to the order totals as a"
+" fee. Updates live as the customer chooses."
 msgstr ""
 "Ein freundliches, optionales Trinkgeld-Feld an der Kasse. Wähle "
 "voreingestellte Beträge aus, Festbeträge oder einen Prozentsatz der "
@@ -152,6 +144,9 @@ msgid ""
 "The heading shown above the tip buttons, e.g. “Add a tip” or “Support our "
 "shelter”. Leave empty to use the translated default shown in the field."
 msgstr ""
+"Die Überschrift über den Trinkgeld-Buttons, z. B. „Trinkgeld geben“ oder "
+"„Unterstütze unser Tierheim“. Leer lassen, um den übersetzten Standardtext "
+"aus dem Feld zu verwenden."
 
 #: src/Admin/Settings.php:157
 msgid "Description"
@@ -163,16 +158,22 @@ msgid ""
 "for the customer. Leave empty to use the translated default shown in the "
 "field."
 msgstr ""
+"Optionaler ergänzender Text unter der Bezeichnung. Trinkgeld ist für den "
+"Kunden immer freiwillig. Leer lassen, um den übersetzten Standardtext aus "
+"dem Feld zu verwenden."
 
 #: src/Admin/Settings.php:165
 msgid "Show the description"
-msgstr ""
+msgstr "Beschreibung anzeigen"
 
 #: src/Admin/Settings.php:168
 msgid ""
 "Untick to show the label on its own. Clearing the text box no longer hides "
 "it, because an empty box now means \"use the default wording\"."
 msgstr ""
+"Deaktiviere diese Option, um nur die Bezeichnung anzuzeigen. Das Leeren des "
+"Textfelds blendet sie nicht mehr aus, denn ein leeres Feld bedeutet jetzt "
+"„Standardtext verwenden“."
 
 #: src/Admin/Settings.php:176
 msgid "Presets"
@@ -198,9 +199,9 @@ msgid ""
 msgstr ""
 "Prozentuale Voreinstellungen skalieren mit dem Warenkorb: Eine "
 "Voreinstellung von 5 fügt 5 % der Zwischensumme hinzu, eine größere "
-"Bestellung bedeutet also ein größeres Trinkgeld. Bei festen Voreinstellungen "
-"bleibt der Pauschalbetrag in der Währung Ihres Shops gleich, unabhängig von "
-"der Gesamtsumme im Warenkorb."
+"Bestellung bedeutet also ein größeres Trinkgeld. Bei festen Voreinstellungen"
+" bleibt der Pauschalbetrag in der Währung Ihres Shops gleich, unabhängig von"
+" der Gesamtsumme im Warenkorb."
 
 #: src/Admin/Settings.php:193
 msgid "Preset values"
@@ -213,6 +214,11 @@ msgid ""
 "Up to eight are shown; the rest are ignored. Leave empty and the control is "
 "hidden until you add at least one."
 msgstr ""
+"Kommagetrennte Werte, Dezimalstellen bis zu zwei Stellen erlaubt. Für "
+"Prozentsätze verwende Zahlen wie 5, 7.5, 10; für Festbeträge verwende "
+"Währungswerte (2, 5, 10). Es werden bis zu acht angezeigt; der Rest wird "
+"ignoriert. Bleibt das Feld leer, ist das Trinkgeld-Feld ausgeblendet, bis du"
+" mindestens einen Wert hinzufügst."
 
 #: src/Admin/Settings.php:241
 msgid "Preview of the tip buttons"
@@ -232,10 +238,18 @@ msgstr "Trinkgeld geben"
 #: src/Service/Texts.php:35
 msgid "Support our team, every tip is appreciated. Choose an amount or skip."
 msgstr ""
+"Unterstütze unser Team, jedes Trinkgeld wird geschätzt. Wähle einen Betrag "
+"oder verzichte darauf."
 
 #: templates/tip-control.php:51
 msgid "No tip"
 msgstr "Kein Trinkgeld"
+
+#~ msgid "Wkrótce"
+#~ msgstr "Demnächst"
+
+#~ msgid "Powiadom mnie"
+#~ msgstr "Benachrichtige mich"
 
 #~ msgid "Tipping - Checkout Tips and Donations for WooCommerce"
 #~ msgstr "Trinkgeld, Trinkgeld und Spenden an der Kasse für WooCommerce"
@@ -260,27 +274,26 @@ msgstr "Kein Trinkgeld"
 #~ "geben“ oder „Unterstütze unser Tierheim“."
 
 #~ msgid ""
-#~ "Optional supporting text shown under the label. Tipping is always "
-#~ "optional for the customer."
+#~ "Optional supporting text shown under the label. Tipping is always optional "
+#~ "for the customer."
 #~ msgstr ""
-#~ "Optionaler unterstützender Text wird unter dem Etikett angezeigt. "
-#~ "Trinkgeld ist für den Kunden immer freiwillig."
+#~ "Optionaler unterstützender Text wird unter dem Etikett angezeigt. Trinkgeld "
+#~ "ist für den Kunden immer freiwillig."
 
 #~ msgid ""
-#~ "Comma-separated values. For percentages use whole numbers (5, 10, 15); "
-#~ "for fixed amounts use currency values (2, 5, 10). Up to eight are shown; "
-#~ "the rest are ignored. Leave empty and the control is hidden until you add "
-#~ "at least one."
+#~ "Comma-separated values. For percentages use whole numbers (5, 10, 15); for "
+#~ "fixed amounts use currency values (2, 5, 10). Up to eight are shown; the "
+#~ "rest are ignored. Leave empty and the control is hidden until you add at "
+#~ "least one."
 #~ msgstr ""
-#~ "Durch Kommas getrennte Werte. Verwende für Prozentsätze ganze Zahlen (5, "
-#~ "10, 15); Für feste Beträge verwende Währungswerte (2, 5, 10). Es werden "
-#~ "bis zu acht angezeigt; der Rest wird ignoriert. Wenn du das Feld leer "
-#~ "lässt, wird das Steuerelement ausgeblendet, bis du mindestens einen Wert "
-#~ "hinzufügst."
+#~ "Durch Kommas getrennte Werte. Verwende für Prozentsätze ganze Zahlen (5, 10,"
+#~ " 15); Für feste Beträge verwende Währungswerte (2, 5, 10). Es werden bis zu "
+#~ "acht angezeigt; der Rest wird ignoriert. Wenn du das Feld leer lässt, wird "
+#~ "das Steuerelement ausgeblendet, bis du mindestens einen Wert hinzufügst."
 
 #~ msgid ""
-#~ "Tipping - Checkout Tips and Donations for WooCommerce requires "
-#~ "WooCommerce to be active."
+#~ "Tipping - Checkout Tips and Donations for WooCommerce requires WooCommerce "
+#~ "to be active."
 #~ msgstr ""
 #~ "Trinkgeld, Checkout-Tipps und Spenden für WooCommerce erfordern, dass "
 #~ "WooCommerce aktiv ist."
