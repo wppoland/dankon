@@ -49,6 +49,32 @@ it, report a bug or suggest a preset workflow we have missed.
 * Ships with a POT file for translation and removes its option on uninstall.
 * Declares HPOS compatibility. The control renders on the classic (shortcode) checkout.
 
+== Dankon Pro ==
+
+Dankon Pro is a separate paid plugin that extends Dankon.
+
+Included in Dankon:
+
+* Preset amounts
+* No tip by default
+* Native fee
+* Live totals
+* Accessible control
+
+Dankon Pro adds:
+
+* Round-up tip
+* Tip goals and progress bars
+* Recipient / cause splitting
+* Tip reports
+* Post-purchase tipping
+
+The free edition is not a trial and its features stay available without a time limit.
+
+* **Dankon Pro** - [plogins.com/plogins-tipping-pro/](https://plogins.com/plogins-tipping-pro/)
+* **Compare editions and pricing** - [plogins.com/plogins-tipping-pro/pricing/](https://plogins.com/plogins-tipping-pro/pricing/)
+* **PRO documentation** - [plogins.com/plogins-tipping-pro/docs/](https://plogins.com/plogins-tipping-pro/docs/)
+
 == Installation ==
 
 1. Upload the plugin to `/wp-content/plugins/dankon`, or install via Plugins > Add New.
