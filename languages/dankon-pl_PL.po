@@ -25,8 +25,8 @@ msgstr "Dankon - napiwki dla WooCommerce"
 
 #. Plugin URI of the plugin
 #: dankon.php
-msgid "https://plogins.com/plogins-tipping/"
-msgstr "https://plogins.com/plogins-tipping/"
+msgid "https://plogins.com/dankon/"
+msgstr "https://plogins.com/dankon/"
 
 #. Description of the plugin
 #: dankon.php
