@@ -4,14 +4,14 @@
  * scripts/gen-pro-upsell.mjs. The admin upsell renders this; curate the
  * feature list to fit this plugin's settings screen (do not invent features).
  *
- * @package plogins-tipping-pro
+ * @package dankon-pro
  */
 
 defined('ABSPATH') || exit;
 
 return [
     'name'       => 'Dankon Pro',
-    'url'        => 'https://plogins.com/plogins-tipping-pro/pricing/',
+    'url'        => 'https://plogins.com/dankon-pro/pricing/',
     'sellable'   => true,
     'price_from' => 29,
     'currency'   => 'EUR',

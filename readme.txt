@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,15 +26,15 @@ Everything lives on one screen under **WooCommerce > Dankon Tips**: the label an
 description shoppers see, whether presets are fixed amounts or percentages, and
 the preset values themselves.
 
-The code is on GitHub at [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping) if you want to read
+The code is on GitHub at [github.com/wppoland/dankon](https://github.com/wppoland/dankon) if you want to read
 it, report a bug or suggest a preset workflow we have missed.
 
 = Documentation and links =
 
-* **Documentation**: [plogins.com/plogins-tipping/docs/](https://plogins.com/plogins-tipping/docs/)
-* **Plugin page**: [plogins.com/plogins-tipping/](https://plogins.com/plogins-tipping/)
-* **Source code**: [github.com/wppoland/plogins-tipping](https://github.com/wppoland/plogins-tipping)
-* **Bug reports and feature requests**: [github.com/wppoland/plogins-tipping/issues](https://github.com/wppoland/plogins-tipping/issues)
+* **Documentation**: [plogins.com/dankon/docs/](https://plogins.com/dankon/docs/)
+* **Plugin page**: [plogins.com/dankon/](https://plogins.com/dankon/)
+* **Source code**: [github.com/wppoland/dankon](https://github.com/wppoland/dankon)
+* **Bug reports and feature requests**: [github.com/wppoland/dankon/issues](https://github.com/wppoland/dankon/issues)
 
 
 = Features =
@@ -71,9 +71,9 @@ Dankon Pro adds:
 
 The free edition is not a trial and its features stay available without a time limit.
 
-* **Dankon Pro** - [plogins.com/plogins-tipping-pro/](https://plogins.com/plogins-tipping-pro/)
-* **Compare editions and pricing** - [plogins.com/plogins-tipping-pro/pricing/](https://plogins.com/plogins-tipping-pro/pricing/)
-* **PRO documentation** - [plogins.com/plogins-tipping-pro/docs/](https://plogins.com/plogins-tipping-pro/docs/)
+* **Dankon Pro** - [plogins.com/dankon-pro/](https://plogins.com/dankon-pro/)
+* **Compare editions and pricing** - [plogins.com/dankon-pro/pricing/](https://plogins.com/dankon-pro/pricing/)
+* **PRO documentation** - [plogins.com/dankon-pro/docs/](https://plogins.com/dankon-pro/docs/)
 
 == Installation ==
 
@@ -128,6 +128,9 @@ The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the s
 Dankon is fully translatable and ships the `dankon.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.3 =
+* Links point at the new plogins.com address and the renamed GitHub repository.
 
 = 1.1.2 =
 * The upgrade notice's "Coming soon" and "Get notified" labels are English source strings for every language; Polish sites used to get their own Polish source text, which translators in other languages then saw untranslated.
