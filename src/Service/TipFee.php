@@ -36,6 +36,8 @@ final class TipFee implements HasHooks
         add_action('wp_ajax_tipping_set', [$this, 'handleAjax']);
         add_action('wp_ajax_nopriv_tipping_set', [$this, 'handleAjax']);
         add_action('woocommerce_checkout_create_order', [$this, 'persistOnOrder'], 10, 2);
+        // The block checkout (Store API) never fires woocommerce_checkout_create_order.
+        add_action('woocommerce_store_api_checkout_update_order_from_request', [$this, 'persistOnOrder'], 10, 2);
     }
 
     /**
@@ -104,6 +106,11 @@ final class TipFee implements HasHooks
         }
 
         $amount = $this->selection->resolveAmount();
+
+        // A block checkout draft order is updated in place: drop a tip removed since.
+        $order->delete_meta_data(self::ORDER_META);
+        $order->delete_meta_data(self::ORDER_PRESET_META);
+        $order->delete_meta_data(self::ORDER_RECIPIENT_META);
 
         if ($amount > 0.0) {
             $order->update_meta_data(self::ORDER_META, wc_format_decimal($amount));
