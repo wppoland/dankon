@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Tipping - Checkout Tips and Donations for WooCommerce "
 "0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dankon\n"
-"POT-Creation-Date: 2026-10-05T11:15:20+00:00\n"
+"POT-Creation-Date: 2026-10-29T13:43:40+00:00\n"
 "PO-Revision-Date: 2026-06-15 00:00+0000\n"
 "Last-Translator: motylanogha <szatkowski.mariusz@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -217,13 +217,34 @@ msgstr ""
 "Pozostaw puste, a element sterujący pozostanie ukryty, dopóki nie dodasz "
 "przynajmniej jednej."
 
-#: src/Admin/Settings.php:241
+#: src/Admin/Settings.php:206
+msgid "Ecosystem integrations"
+msgstr ""
+
+#: src/Admin/Settings.php:210
+msgid "Krompago (Checkout Fees)"
+msgstr ""
+
+#: src/Admin/Settings.php:214
+msgid ""
+"Krompago is active. Its fees and the tip are added as separate cart fees, "
+"and its percentage fees are worked out on the cart subtotal, not on the tip."
+msgstr ""
+
+#. translators: %s: partner plugin name, linked to its search on the Add Plugins screen.
+#: src/Admin/Settings.php:221
+#, php-format
+msgid ""
+"Install %s to add fixed or percentage checkout fees next to customer tips."
+msgstr ""
+
+#: src/Admin/Settings.php:269
 msgid "Preview of the tip buttons"
 msgstr "Podgląd przycisków napiwków"
 
 #. translators: %s: a percentage, e.g. 5 or 7.5.
 #. translators: %s: a percentage, e.g. 10 or 7.5.
-#: src/Admin/Settings.php:247 src/Frontend/TipControl.php:115
+#: src/Admin/Settings.php:275 src/Frontend/TipControl.php:115
 #, php-format
 msgid "%s%%"
 msgstr "%s%%"
