@@ -202,6 +202,28 @@ final class Settings implements HasHooks
                     </table>
                 </div>
 
+                <div class="tipping-admin__card">
+                    <h2><?php esc_html_e('Ecosystem integrations', 'dankon'); ?></h2>
+                    <table class="form-table" role="presentation">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php esc_html_e('Surcharge (Payment Fees)', 'dankon'); ?></th>
+                                <td>
+                                    <?php if (class_exists('\Surcharge\Plugin')) : ?>
+                                        <p class="description" style="color:#007017;font-weight:600;">
+                                            <?php esc_html_e('Surcharge is active. Tips and payment gateway surcharges are calculated cleanly without fee collisions.', 'dankon'); ?>
+                                        </p>
+                                    <?php else : ?>
+                                        <p class="description">
+                                            <?php esc_html_e('Install Surcharge (Payment Gateway Surcharges for WooCommerce) to pass gateway fees or offer payment discounts alongside customer tips.', 'dankon'); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <?php
                 /**
                  * Fires inside the settings form, after the FREE setting cards and
