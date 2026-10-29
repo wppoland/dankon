@@ -215,7 +215,13 @@ final class Settings implements HasHooks
                                         </p>
                                     <?php else : ?>
                                         <p class="description">
-                                            <?php esc_html_e('Install Krompago - Checkout Fees for WooCommerce to add fixed or percentage checkout fees next to customer tips.', 'dankon'); ?>
+                                            <?php
+                                            printf(
+                                                /* translators: %s: partner plugin name, linked to its search on the Add Plugins screen. */
+                                                esc_html__('Install %s to add fixed or percentage checkout fees next to customer tips.', 'dankon'),
+                                                '<a href="' . esc_url(admin_url('plugin-install.php?s=' . rawurlencode('Krompago - Checkout Fees for WooCommerce') . '&tab=search&type=term')) . '">' . esc_html('Krompago - Checkout Fees for WooCommerce') . '</a>'
+                                            );
+                                            ?>
                                         </p>
                                     <?php endif; ?>
                                 </td>
