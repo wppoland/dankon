@@ -202,6 +202,28 @@ final class Settings implements HasHooks
                     </table>
                 </div>
 
+                <div class="tipping-admin__card">
+                    <h2><?php esc_html_e('Ecosystem integrations', 'dankon'); ?></h2>
+                    <table class="form-table" role="presentation">
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php esc_html_e('Krompago (Checkout Fees)', 'dankon'); ?></th>
+                                <td>
+                                    <?php if (class_exists('\Surcharge\Plugin')) : ?>
+                                        <p class="description" style="color:#007017;font-weight:600;">
+                                            <?php esc_html_e('Krompago is active. Its fees and the tip are added as separate cart fees, and its percentage fees are worked out on the cart subtotal, not on the tip.', 'dankon'); ?>
+                                        </p>
+                                    <?php else : ?>
+                                        <p class="description">
+                                            <?php esc_html_e('Install Krompago - Checkout Fees for WooCommerce to add fixed or percentage checkout fees next to customer tips.', 'dankon'); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <?php
                 /**
                  * Fires inside the settings form, after the FREE setting cards and
