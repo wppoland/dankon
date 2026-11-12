@@ -30,7 +30,7 @@ use Tipping\Frontend\TipControl;
     <?php endif; ?>
 
     <?php
-    $context = compact('options', 'presets', 'current', 'recipients', 'isPercent', 'label', 'description');
+    $tipping_context = compact('options', 'presets', 'current', 'recipients', 'isPercent', 'label', 'description');
     /**
      * Fires before the preset buttons inside the tip control.
      *
@@ -38,7 +38,7 @@ use Tipping\Frontend\TipControl;
      *
      * @param array<string, mixed> $context Template context passed from TipControl.
      */
-    do_action('tipping/control_before_options', $context);
+    do_action('tipping/control_before_options', $tipping_context);
     ?>
 
     <div class="tipping__options">

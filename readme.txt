@@ -5,7 +5,7 @@ Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
 Requires Plugins: woocommerce
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,9 @@ The customer's tip choice is posted to WordPress's own `admin-ajax.php` on the s
 Dankon is fully translatable and ships the `dankon.pot` template. Translations are delivered by WordPress.org language packs from translate.wordpress.org, which is where Polish, German and Spanish are being contributed; the package itself carries no compiled translation files.
 
 == Changelog ==
+
+= 1.1.8 =
+* Changed: internal template variable renamed with the plugin prefix (no visible change).
 
 = 1.1.7 =
 * Fixed: deleting the plugin on a multisite network now removes its settings from every site, not only the main one.
