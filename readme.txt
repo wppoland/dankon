@@ -35,6 +35,7 @@ it, report a bug or suggest a preset workflow we have missed.
 * **Plugin page**: [plogins.com/dankon/](https://plogins.com/dankon/)
 * **Source code**: [github.com/wppoland/dankon](https://github.com/wppoland/dankon)
 * **Bug reports and feature requests**: [github.com/wppoland/dankon/issues](https://github.com/wppoland/dankon/issues)
+* **Dankon Pro**: [plogins.com/dankon-pro/](https://plogins.com/dankon-pro/)
 
 
 = Features =
