@@ -160,18 +160,34 @@
 	}
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark styling follows the page's color scheme (set by the theme), not the OS. */
+@supports (color: light-dark(white, black)) {
 	.tipping {
-		--tipping-accent: var(--wp--preset--color--primary, #e0a85a);
-		--tipping-ink: var(--wp--preset--color--primary, #f0c887);
-		--tipping-accent-soft: rgba(224, 168, 90, 0.16);
-		--tipping-accent-contrast: #1a1206;
-		--tipping-border: rgba(255, 240, 220, 0.2);
-		--tipping-bg: rgba(224, 168, 90, 0.06);
-		--tipping-pill-bg: rgba(255, 250, 240, 0.05);
+		--tipping-accent: light-dark(var(--wp--preset--color--primary, #b06a13), var(--wp--preset--color--primary, #e0a85a));
+		--tipping-ink: light-dark(var(--wp--preset--color--primary, #8a4f06), var(--wp--preset--color--primary, #f0c887));
+		--tipping-accent-soft: light-dark(rgba(176, 106, 19, 0.12), rgba(224, 168, 90, 0.16));
+		--tipping-accent-contrast: light-dark(#fff8ee, #1a1206);
+		--tipping-border: light-dark(rgba(60, 40, 12, 0.18), rgba(255, 240, 220, 0.2));
+		--tipping-bg: light-dark(rgba(176, 106, 19, 0.04), rgba(224, 168, 90, 0.06));
+		--tipping-pill-bg: light-dark(#fffdf9, rgba(255, 250, 240, 0.05));
 	}
+}
 
-	.tipping__option.is-active {
-		color: var(--tipping-ink);
+/* Browsers without light-dark() keep following the OS preference. */
+@supports not (color: light-dark(white, black)) {
+	@media (prefers-color-scheme: dark) {
+		.tipping {
+			--tipping-accent: var(--wp--preset--color--primary, #e0a85a);
+			--tipping-ink: var(--wp--preset--color--primary, #f0c887);
+			--tipping-accent-soft: rgba(224, 168, 90, 0.16);
+			--tipping-accent-contrast: #1a1206;
+			--tipping-border: rgba(255, 240, 220, 0.2);
+			--tipping-bg: rgba(224, 168, 90, 0.06);
+			--tipping-pill-bg: rgba(255, 250, 240, 0.05);
+		}
+
+		.tipping__option.is-active {
+			color: var(--tipping-ink);
+		}
 	}
 }
