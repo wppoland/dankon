@@ -2,7 +2,7 @@
 Contributors: motylanogha
 Tags: woocommerce, tips, donations, checkout, gratuity
 Requires at least: 6.5
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 8.1
 Requires Plugins: woocommerce
 Stable tag: 1.1.10
