@@ -16,25 +16,25 @@ return [
     'price_from' => 29,
     'currency'   => 'EUR',
     'lead'       => [
-        'en' => 'The 0.4.0 release ships round-up tipping, tip goal progress bar, recipient splitting, tip reports and post-purchase tipping.',
-        'pl' => 'Wydanie 0.4.0 dostarcza zaokrąglenie w górę, cel zbiórki, podział na odbiorców, raporty napiwków i napiwek po zakupie.',
+        'en' => 'The 0.4.0 release ships round-up tipping, tip goal progress bar, tip recipients, tip reports and post-purchase tipping.',
+        'pl' => 'Wydanie 0.4.0 dostarcza zaokrąglenie w górę, cel zbiórki, wybór odbiorcy napiwku, raporty napiwków i napiwek po zakupie.',
     ],
     'features'   => [
         [
-            'en' => ['title' => 'Round-up tip', 'desc' => 'Round the order total up and add the difference as the tip in one tap (shipped).'],
-            'pl' => ['title' => 'Zaokrąglenie w górę', 'desc' => 'Zaokrąglij sumę zamówienia w górę i dodaj różnicę jako napiwek jednym kliknięciem (wdrożone).'],
+            'en' => ['title' => 'Round-up tip', 'desc' => 'When the store turns rounding on, the tip a shopper picks is raised so the items subtotal plus the tip lands on the next whole amount, or on a multiple you set, such as 5. No tip stays zero (shipped).'],
+            'pl' => ['title' => 'Zaokrąglenie w górę', 'desc' => 'Gdy włączysz zaokrąglanie, wybrany przez klienta napiwek rośnie tak, aby podsuma produktów razem z napiwkiem dała pełną kwotę albo ustawioną przez Ciebie wielokrotność, np. 5. Przy wyborze Bez napiwku napiwek wynosi zero (wdrożone).'],
         ],
         [
             'en' => ['title' => 'Tip goals and progress bars', 'desc' => 'Show a fundraising goal with a live progress bar so shoppers can see how close a campaign is to its target (shipped).'],
             'pl' => ['title' => 'Cele zbiórki i paski postępu', 'desc' => 'Pokaż cel zbiórki z paskiem postępu na żywo, aby klient widział, jak blisko kampania jest celu (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Recipient / cause splitting', 'desc' => 'Let shoppers choose which cause or recipient their tip supports, and split totals across multiple recipients (shipped).'],
-            'pl' => ['title' => 'Podział na odbiorców / cele', 'desc' => 'Pozwól klientowi wybrać cel lub odbiorcę napiwku i podziel sumy między wielu odbiorców (wdrożone).'],
+            'en' => ['title' => 'Tip recipients', 'desc' => 'The shopper picks one cause or recipient for their tip from a dropdown, and reports show the tip total per recipient (shipped).'],
+            'pl' => ['title' => 'Odbiorcy napiwków', 'desc' => 'Klient wybiera z listy jeden cel lub odbiorcę swojego napiwku, a raporty pokazują sumę napiwków dla każdego odbiorcy (wdrożone).'],
         ],
         [
-            'en' => ['title' => 'Tip reports', 'desc' => 'Break down tips by period, preset and recipient, with CSV export for accounting (shipped).'],
-            'pl' => ['title' => 'Raporty napiwków', 'desc' => 'Rozbij napiwki według okresu, presetu i odbiorcy, z eksportem CSV do księgowości (wdrożone).'],
+            'en' => ['title' => 'Tip reports', 'desc' => 'Break down tips from paid orders by period, preset and recipient, with CSV export for accounting (shipped).'],
+            'pl' => ['title' => 'Raporty napiwków', 'desc' => 'Rozbij napiwki z opłaconych zamówień według okresu, presetu i odbiorcy, z eksportem CSV do księgowości (wdrożone).'],
         ],
         [
             'en' => ['title' => 'Post-purchase tipping', 'desc' => 'Invite a tip on the thank-you page after checkout (shipped).'],
